@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunklottery_ui"]=self["webpackChunklottery_ui"]||[]).push([[594],{4006:function(r,t,u){u.r(t),u.d(t,{default:function(){return f}});var e=u(6768);function n(r,t,u,n,c,i){return(0,e.uX)(),(0,e.CE)("div")}var c={},i=u(1241);const a=(0,i.A)(c,[["render",n]]);var f=a}}]);
+//# sourceMappingURL=about.56204497.js.map
