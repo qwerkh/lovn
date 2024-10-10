@@ -781,6 +781,16 @@ export default {
   },
 
   methods: {
+    /*************  ✨ Codeium Command ⭐  *************/
+    /**
+     * @param {number} d - the day of week to get the corresponding Monday. 0 = Sunday, 1 = Monday, ..., 6 = Saturday
+     * @description
+     * Set the date to the Monday of the week containing the given day of week.
+     * e.g. If the current date is Thursday, August 1st and the given day of week is Tuesday,
+     *      the date will be set to Monday, July 29th.
+     */
+    /******  f2ce2f5d-0426-445e-9158-d198ab4e7ff1  *******/
+
     getCurrentWeeksMonday(d) {
       const today = new Date();
       const dayOfWeek = today.getDay(); // 0 (Sunday) to 6 (Saturday)
@@ -866,6 +876,9 @@ export default {
     updateTime() {
       const now = new Date();
       this.currentTime = now.toLocaleTimeString(); // Format the time
+      if (moment(now).format("mmss") == "0030") {
+        this.fetchResult();
+      }
     },
   },
   created() {
