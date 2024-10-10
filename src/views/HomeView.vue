@@ -72,7 +72,7 @@
           <v-card>
             <v-img
               class="bg-grey-lighten-2"
-              height="125"
+              height="100"
               src="https://picsum.photos/350/165?random"
               cover
             ></v-img>
@@ -215,24 +215,121 @@
                       <tr>
                         <th class="bigFont">A</th>
                         <th class="bigFont">
-                          {{ (doc.postA && doc.postA.result2D) || "" }}-{{
-                            (doc.postA && doc.postA.result3D) || ""
-                          }}
+                          {{ (doc.postA && doc.postA.result2D) || "" }}
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postA && doc.postA.result2D)"
+                            color="red"
+                            indeterminate
+                          ></v-progress-circular>
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postA && doc.postA.result2D)"
+                            color="red"
+                            indeterminate
+                          ></v-progress-circular>
+
+                          -
+                          {{ (doc.postA && doc.postA.result3D) || "" }}
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postA && doc.postA.result3D)"
+                            color="red"
+                            indeterminate
+                          ></v-progress-circular>
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postA && doc.postA.result3D)"
+                            color="red"
+                            indeterminate
+                          ></v-progress-circular>
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postA && doc.postA.result3D)"
+                            color="red"
+                            indeterminate
+                          ></v-progress-circular>
                         </th>
                         <th class="bigFont2" style="vertical-align: middle">
                           {{ (doc.postLa && doc.postLa.result2D[0]) || "" }}
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postLa && doc.postLa.result2D[0])"
+                            color="red"
+                            indeterminate
+                          ></v-progress-circular>
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postLa && doc.postLa.result2D[0])"
+                            color="red"
+                            indeterminate
+                          ></v-progress-circular>
                         </th>
                         <th class="bigFont2" style="vertical-align: middle">
                           {{ (doc.postLa && doc.postLa.result3D[0]) || "" }}
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postLa && doc.postLa.result3D[0])"
+                            color="red"
+                            indeterminate
+                          ></v-progress-circular>
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postLa && doc.postLa.result3D[0])"
+                            color="red"
+                            indeterminate
+                          ></v-progress-circular>
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postLa && doc.postLa.result3D[0])"
+                            color="red"
+                            indeterminate
+                          ></v-progress-circular>
                         </th>
                       </tr>
 
                       <tr>
                         <th class="bigLabelFont">B</th>
                         <th class="bigLabelFontR">
-                          {{ (doc.postB && doc.postB.result2D) || "" }}-{{
-                            (doc.postB && doc.postB.result3D) || ""
-                          }}
+                          {{ (doc.postB && doc.postB.result2D) || "" }}
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postB && doc.postB.result2D)"
+                            color="primary"
+                            indeterminate
+                          ></v-progress-circular>
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postB && doc.postB.result2D)"
+                            color="primary"
+                            indeterminate
+                          ></v-progress-circular>
+                          -{{ (doc.postB && doc.postB.result3D) || "" }}
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postB && doc.postB.result3D)"
+                            color="primary"
+                            indeterminate
+                          ></v-progress-circular>
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postB && doc.postB.result3D)"
+                            color="primary"
+                            indeterminate
+                          ></v-progress-circular>
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postB && doc.postB.result3D)"
+                            color="primary"
+                            indeterminate
+                          ></v-progress-circular>
                         </th>
                         <th
                           rowspan="6"
@@ -249,6 +346,23 @@
                             <br v-if="ind % 2 == 0 && ind > 0" />
                             &nbsp;&nbsp;&nbsp;{{ myResult }}
                           </span>
+                          <v-progress-circular
+                            size="20"
+                            v-if="
+                              !(doc.postLa && doc.postLa.result2D.length > 0)
+                            "
+                            color="primary"
+                            indeterminate
+                          ></v-progress-circular>
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="
+                              !(doc.postLa && doc.postLa.result2D.length > 0)
+                            "
+                            color="primary"
+                            indeterminate
+                          ></v-progress-circular>
                         </th>
                         <th rowspan="6" class="bigLabelFontLoRed">
                           <span
@@ -261,51 +375,236 @@
                             <br v-if="ind % 2 == 0 && ind > 0" />
                             &nbsp;&nbsp;&nbsp;{{ myResult }}
                           </span>
+                          <v-progress-circular
+                            size="20"
+                            v-if="
+                              !(doc.postLa && doc.postLa.result3D.length > 0)
+                            "
+                            color="red"
+                            indeterminate
+                          ></v-progress-circular>
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="
+                              !(doc.postLa && doc.postLa.result3D.length > 0)
+                            "
+                            color="red"
+                            indeterminate
+                          ></v-progress-circular>
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="
+                              !(doc.postLa && doc.postLa.result3D.length > 0)
+                            "
+                            color="red"
+                            indeterminate
+                          ></v-progress-circular>
                         </th>
                       </tr>
 
                       <tr>
                         <th class="bigLabelFont">C</th>
                         <th class="bigLabelFontR">
-                          {{ (doc.postC && doc.postC.result2D) || "" }}-{{
-                            (doc.postC && doc.postC.result3D) || ""
-                          }}
+                          {{ (doc.postC && doc.postC.result2D) || "" }}
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postC && doc.postC.result2D)"
+                            color="primary"
+                            indeterminate
+                          ></v-progress-circular>
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postC && doc.postC.result2D)"
+                            color="primary"
+                            indeterminate
+                          ></v-progress-circular>
+                          -{{ (doc.postC && doc.postC.result3D) || "" }}
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postC && doc.postC.result3D)"
+                            color="primary"
+                            indeterminate
+                          ></v-progress-circular>
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postC && doc.postC.result3D)"
+                            color="primary"
+                            indeterminate
+                          ></v-progress-circular>
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postC && doc.postC.result3D)"
+                            color="primary"
+                            indeterminate
+                          ></v-progress-circular>
                         </th>
                       </tr>
 
                       <tr>
                         <th class="bigLabelFont">D</th>
                         <th class="bigLabelFontR">
-                          {{ (doc.postD && doc.postD.result2D) || "" }}-{{
-                            (doc.postD && doc.postD.result3D) || ""
-                          }}
+                          {{ (doc.postD && doc.postD.result2D) || "" }}
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postD && doc.postD.result2D)"
+                            color="primary"
+                            indeterminate
+                          ></v-progress-circular>
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postD && doc.postD.result2D)"
+                            color="primary"
+                            indeterminate
+                          ></v-progress-circular>
+                          -{{ (doc.postD && doc.postD.result3D) || "" }}
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postD && doc.postD.result3D)"
+                            color="primary"
+                            indeterminate
+                          ></v-progress-circular>
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postD && doc.postD.result3D)"
+                            color="primary"
+                            indeterminate
+                          ></v-progress-circular>
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postD && doc.postD.result3D)"
+                            color="primary"
+                            indeterminate
+                          ></v-progress-circular>
                         </th>
                       </tr>
 
                       <tr>
                         <th class="bigLabelFont2">F</th>
                         <th class="bigLabelFontBlack">
-                          {{ (doc.postF && doc.postF.result2D) || "" }}-{{
-                            (doc.postF && doc.postF.result3D) || ""
-                          }}
+                          {{ (doc.postF && doc.postF.result2D) || "" }}
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postF && doc.postF.result2D)"
+                            color="amber"
+                            indeterminate
+                          ></v-progress-circular>
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postF && doc.postF.result2D)"
+                            color="amber"
+                            indeterminate
+                          ></v-progress-circular>
+                          -{{ (doc.postF && doc.postF.result3D) || "" }}
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postF && doc.postF.result3D)"
+                            color="amber"
+                            indeterminate
+                          ></v-progress-circular>
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postF && doc.postF.result3D)"
+                            color="amber"
+                            indeterminate
+                          ></v-progress-circular>
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postF && doc.postF.result3D)"
+                            color="amber"
+                            indeterminate
+                          ></v-progress-circular>
                         </th>
                       </tr>
 
                       <tr>
                         <th class="bigLabelFont2">I</th>
                         <th class="bigLabelFontBlack">
-                          {{ (doc.postI && doc.postI.result2D) || "" }}-{{
-                            (doc.postI && doc.postI.result3D) || ""
-                          }}
+                          {{ (doc.postI && doc.postI.result2D) || "" }}
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postI && doc.postI.result2D)"
+                            color="amber"
+                            indeterminate
+                          ></v-progress-circular>
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postI && doc.postI.result2D)"
+                            color="amber"
+                            indeterminate
+                          ></v-progress-circular>
+                          -{{ (doc.postI && doc.postI.result3D) || "" }}
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postI && doc.postI.result3D)"
+                            color="amber"
+                            indeterminate
+                          ></v-progress-circular>
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postI && doc.postI.result3D)"
+                            color="amber"
+                            indeterminate
+                          ></v-progress-circular>
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postI && doc.postI.result3D)"
+                            color="amber"
+                            indeterminate
+                          ></v-progress-circular>
                         </th>
                       </tr>
 
                       <tr>
                         <th class="bigLabelFont2">N</th>
                         <th class="bigLabelFontBlack">
-                          {{ (doc.postN && doc.postN.result2D) || "" }}-{{
-                            (doc.postN && doc.postN.result3D) || ""
-                          }}
+                          {{ (doc.postN && doc.postN.result2D) || "" }}
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postN && doc.postN.result2D)"
+                            color="amber"
+                            indeterminate
+                          ></v-progress-circular>
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postN && doc.postN.result2D)"
+                            color="amber"
+                            indeterminate
+                          ></v-progress-circular>
+                          -{{ (doc.postN && doc.postN.result3D) || "" }}
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postN && doc.postN.result3D)"
+                            color="amber"
+                            indeterminate
+                          ></v-progress-circular>
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postN && doc.postN.result3D)"
+                            color="amber"
+                            indeterminate
+                          ></v-progress-circular>
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postN && doc.postN.result3D)"
+                            color="amber"
+                            indeterminate
+                          ></v-progress-circular>
                         </th>
                       </tr>
                     </tbody>
@@ -334,21 +633,100 @@
                       <tr>
                         <th class="bigFont2">
                           {{ (doc.postLb && doc.postLb.result2D[0]) || "" }}
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postLb && doc.postLb.result2D[0])"
+                            color="red"
+                            indeterminate
+                          ></v-progress-circular>
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postLb && doc.postLb.result2D[0])"
+                            color="red"
+                            indeterminate
+                          ></v-progress-circular>
                         </th>
                         <th class="bigFont2">
                           {{ (doc.postLb && doc.postLb.result2D[1]) || "" }}
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postLb && doc.postLb.result2D[1])"
+                            color="red"
+                            indeterminate
+                          ></v-progress-circular>
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postLb && doc.postLb.result2D[1])"
+                            color="red"
+                            indeterminate
+                          ></v-progress-circular>
                         </th>
 
                         <th class="bigFont2">
                           {{ (doc.postLb && doc.postLb.result3D[0]) || "" }}
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postLb && doc.postLb.result3D[0])"
+                            color="red"
+                            indeterminate
+                          ></v-progress-circular>
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postLb && doc.postLb.result3D[0])"
+                            color="red"
+                            indeterminate
+                          ></v-progress-circular>
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postLb && doc.postLb.result3D[0])"
+                            color="red"
+                            indeterminate
+                          ></v-progress-circular>
                         </th>
                         <th class="bigFont2">
                           {{ (doc.postLb && doc.postLb.result3D[1]) || "" }}
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postLb && doc.postLb.result3D[1])"
+                            color="red"
+                            indeterminate
+                          ></v-progress-circular>
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postLb && doc.postLb.result3D[1])"
+                            color="red"
+                            indeterminate
+                          ></v-progress-circular>
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postLb && doc.postLb.result3D[1])"
+                            color="red"
+                            indeterminate
+                          ></v-progress-circular>
                         </th>
                       </tr>
 
                       <tr>
-                        <th colspan="2" rowspan="6" class="bigLabelFontLo">
+                        <th
+                          colspan="2"
+                          rowspan="6"
+                          :style="
+                            doc.postLb.result2D.length > 0
+                              ? ''
+                              : 'height: 170px'
+                          "
+                          class="bigLabelFontLo"
+                        >
                           <span
                             style="margin-bottom: 0px !important"
                             v-for="(myResult, ind) in filterRemove2(
@@ -359,6 +737,24 @@
                             <br v-if="ind % 4 == 0 && ind > 0" />
                             &nbsp;&nbsp;&nbsp;{{ myResult }}
                           </span>
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="
+                              !(doc.postLb && doc.postLb.result2D.length > 0)
+                            "
+                            color="primary"
+                            indeterminate
+                          ></v-progress-circular>
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="
+                              !(doc.postLb && doc.postLb.result2D.length > 0)
+                            "
+                            color="primary"
+                            indeterminate
+                          ></v-progress-circular>
                         </th>
                         <th colspan="2" rowspan="6" class="bigLabelFontLoRed">
                           <span
@@ -371,6 +767,30 @@
                             <br v-if="ind % 4 == 0 && ind > 0" />
                             &nbsp;&nbsp;&nbsp;{{ myResult }}
                           </span>
+                          <v-progress-circular
+                            size="20"
+                            v-if="
+                              !(doc.postLb && doc.postLb.result3D.length > 0)
+                            "
+                            color="red"
+                            indeterminate
+                          ></v-progress-circular>
+                          <v-progress-circular
+                            size="20"
+                            v-if="
+                              !(doc.postLb && doc.postLb.result3D.length > 0)
+                            "
+                            color="red"
+                            indeterminate
+                          ></v-progress-circular>
+                          <v-progress-circular
+                            size="20"
+                            v-if="
+                              !(doc.postLb && doc.postLb.result3D.length > 0)
+                            "
+                            color="red"
+                            indeterminate
+                          ></v-progress-circular>
                         </th>
                       </tr>
                     </tbody>
@@ -405,7 +825,6 @@
           <v-card>
             <v-img
               class="bg-grey-lighten-2"
-              height="100"
               src="https://picsum.photos/350/165?random"
               cover
             ></v-img>
@@ -548,24 +967,119 @@
                       <tr>
                         <th class="bigFontM">A</th>
                         <th class="bigFontM">
-                          {{ (doc.postA && doc.postA.result2D) || "" }}-{{
-                            (doc.postA && doc.postA.result3D) || ""
-                          }}
+                          {{ (doc.postA && doc.postA.result2D) || "" }}
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postA && doc.postA.result2D)"
+                            color="red"
+                            indeterminate
+                          ></v-progress-circular>
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postA && doc.postA.result2D)"
+                            color="red"
+                            indeterminate
+                          ></v-progress-circular
+                          >-{{ (doc.postA && doc.postA.result3D) || "" }}
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postA && doc.postA.result2D)"
+                            color="red"
+                            indeterminate
+                          ></v-progress-circular>
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postA && doc.postA.result2D)"
+                            color="red"
+                            indeterminate
+                          ></v-progress-circular>
                         </th>
                         <th class="bigFontM2" style="vertical-align: middle">
                           {{ (doc.postLa && doc.postLa.result2D[0]) || "" }}
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postLa && doc.postLa.result2D[0])"
+                            color="red"
+                            indeterminate
+                          ></v-progress-circular>
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postLa && doc.postLa.result2D[0])"
+                            color="red"
+                            indeterminate
+                          ></v-progress-circular>
                         </th>
                         <th class="bigFontM2" style="vertical-align: middle">
                           {{ (doc.postLa && doc.postLa.result3D[0]) || "" }}
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postLa && doc.postLa.result3D[0])"
+                            color="red"
+                            indeterminate
+                          ></v-progress-circular>
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postLa && doc.postLa.result3D[0])"
+                            color="red"
+                            indeterminate
+                          ></v-progress-circular>
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postLa && doc.postLa.result3D[0])"
+                            color="red"
+                            indeterminate
+                          ></v-progress-circular>
                         </th>
                       </tr>
 
                       <tr>
                         <th class="bigLabelFontM">B</th>
                         <th class="bigLabelFontMR">
-                          {{ (doc.postB && doc.postB.result2D) || "" }}-{{
-                            (doc.postB && doc.postB.result3D) || ""
-                          }}
+                          {{ (doc.postB && doc.postB.result2D) || "" }}
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postB && doc.postB.result2D)"
+                            color="primary"
+                            indeterminate
+                          ></v-progress-circular>
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postB && doc.postB.result2D)"
+                            color="primary"
+                            indeterminate
+                          ></v-progress-circular
+                          >-{{ (doc.postB && doc.postB.result3D) || "" }}
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postB && doc.postB.result3D)"
+                            color="primary"
+                            indeterminate
+                          ></v-progress-circular>
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postB && doc.postB.result3D)"
+                            color="primary"
+                            indeterminate
+                          ></v-progress-circular>
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postB && doc.postB.result3D)"
+                            color="primary"
+                            indeterminate
+                          ></v-progress-circular>
                         </th>
                         <th
                           rowspan="6"
@@ -582,6 +1096,23 @@
                             <br v-if="ind % 2 == 0 && ind > 0" />
                             &nbsp;&nbsp;&nbsp;{{ myResult }}
                           </span>
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="
+                              !(doc.postLa && doc.postLa.result2D.length > 0)
+                            "
+                            color="primary"
+                            indeterminate
+                          ></v-progress-circular>
+                          <v-progress-circular
+                            size="20"
+                            v-if="
+                              !(doc.postLa && doc.postLa.result2D.length > 0)
+                            "
+                            color="primary"
+                            indeterminate
+                          ></v-progress-circular>
                         </th>
                         <th rowspan="6" class="bigLabelFontLoRedM">
                           <span
@@ -594,51 +1125,245 @@
                             <br v-if="ind % 2 == 1 && ind > 0" />
                             &nbsp;&nbsp;&nbsp;{{ myResult }}
                           </span>
+                          <v-progress-circular
+                            size="20"
+                            v-if="
+                              !(doc.postLa && doc.postLa.result3D.length > 0)
+                            "
+                            color="red"
+                            indeterminate
+                          ></v-progress-circular>
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="
+                              !(doc.postLa && doc.postLa.result3D.length > 0)
+                            "
+                            color="red"
+                            indeterminate
+                          ></v-progress-circular>
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="
+                              !(doc.postLa && doc.postLa.result3D.length > 0)
+                            "
+                            color="red"
+                            indeterminate
+                          ></v-progress-circular>
                         </th>
                       </tr>
 
                       <tr>
                         <th class="bigLabelFontM">C</th>
                         <th class="bigLabelFontMR">
-                          {{ (doc.postC && doc.postC.result2D) || "" }}-{{
-                            (doc.postC && doc.postC.result3D) || ""
-                          }}
+                          {{ (doc.postC && doc.postC.result2D) || "" }}
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postC && doc.postC.result2D)"
+                            color="primary"
+                            indeterminate
+                          ></v-progress-circular>
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postC && doc.postC.result2D)"
+                            color="primary"
+                            indeterminate
+                          ></v-progress-circular
+                          >-{{ (doc.postC && doc.postC.result3D) || "" }}
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postC && doc.postC.result3D)"
+                            color="primary"
+                            indeterminate
+                          ></v-progress-circular>
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postC && doc.postC.result3D)"
+                            color="primary"
+                            indeterminate
+                          ></v-progress-circular>
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postC && doc.postC.result3D)"
+                            color="primary"
+                            indeterminate
+                          ></v-progress-circular>
                         </th>
                       </tr>
 
                       <tr>
                         <th class="bigLabelFontM">D</th>
                         <th class="bigLabelFontMR">
-                          {{ (doc.postD && doc.postD.result2D) || "" }}-{{
-                            (doc.postD && doc.postD.result3D) || ""
-                          }}
+                          {{ (doc.postD && doc.postD.result2D) || "" }}
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postD && doc.postD.result2D)"
+                            color="primary"
+                            indeterminate
+                          ></v-progress-circular>
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postD && doc.postD.result2D)"
+                            color="primary"
+                            indeterminate
+                          ></v-progress-circular
+                          >-{{ (doc.postD && doc.postD.result3D) || "" }}
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postD && doc.postD.result3D)"
+                            color="primary"
+                            indeterminate
+                          ></v-progress-circular>
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postD && doc.postD.result3D)"
+                            color="primary"
+                            indeterminate
+                          ></v-progress-circular>
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postD && doc.postD.result3D)"
+                            color="primary"
+                            indeterminate
+                          ></v-progress-circular>
                         </th>
                       </tr>
 
                       <tr>
                         <th class="bigLabelFontM2">F</th>
                         <th class="bigLabelFontBlackM">
-                          {{ (doc.postF && doc.postF.result2D) || "" }}-{{
-                            (doc.postF && doc.postF.result3D) || ""
-                          }}
+                          {{ (doc.postF && doc.postF.result2D) || "" }}
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postF && doc.postF.result2D)"
+                            color="amber"
+                            indeterminate
+                          ></v-progress-circular>
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postF && doc.postF.result2D)"
+                            color="amber"
+                            indeterminate
+                          ></v-progress-circular
+                          >-{{ (doc.postF && doc.postF.result3D) || "" }}
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postF && doc.postF.result3D)"
+                            color="amber"
+                            indeterminate
+                          ></v-progress-circular>
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postF && doc.postF.result3D)"
+                            color="amber"
+                            indeterminate
+                          ></v-progress-circular>
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postF && doc.postF.result3D)"
+                            color="amber"
+                            indeterminate
+                          ></v-progress-circular>
                         </th>
                       </tr>
 
                       <tr>
                         <th class="bigLabelFontM2">I</th>
                         <th class="bigLabelFontBlackM">
-                          {{ (doc.postI && doc.postI.result2D) || "" }}-{{
-                            (doc.postI && doc.postI.result3D) || ""
-                          }}
+                          {{ (doc.postI && doc.postI.result2D) || "" }}
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postI && doc.postI.result2D)"
+                            color="amber"
+                            indeterminate
+                          ></v-progress-circular>
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postI && doc.postI.result2D)"
+                            color="amber"
+                            indeterminate
+                          ></v-progress-circular
+                          >-{{ (doc.postI && doc.postI.result3D) || "" }}
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postI && doc.postI.result3D)"
+                            color="amber"
+                            indeterminate
+                          ></v-progress-circular>
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postI && doc.postI.result3D)"
+                            color="amber"
+                            indeterminate
+                          ></v-progress-circular>
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postI && doc.postI.result3D)"
+                            color="amber"
+                            indeterminate
+                          ></v-progress-circular>
                         </th>
                       </tr>
 
                       <tr>
                         <th class="bigLabelFontM2">N</th>
                         <th class="bigLabelFontBlackM">
-                          {{ (doc.postN && doc.postN.result2D) || "" }}-{{
-                            (doc.postN && doc.postN.result3D) || ""
-                          }}
+                          {{ (doc.postN && doc.postN.result2D) || "" }}
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postN && doc.postN.result2D)"
+                            color="amber"
+                            indeterminate
+                          ></v-progress-circular>
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postN && doc.postN.result2D)"
+                            color="amber"
+                            indeterminate
+                          ></v-progress-circular>
+                          -{{ (doc.postN && doc.postN.result3D) || "" }}
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postN && doc.postN.result3D)"
+                            color="amber"
+                            indeterminate
+                          ></v-progress-circular>
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postN && doc.postN.result3D)"
+                            color="amber"
+                            indeterminate
+                          ></v-progress-circular>
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postN && doc.postN.result3D)"
+                            color="amber"
+                            indeterminate
+                          ></v-progress-circular>
                         </th>
                       </tr>
                     </tbody>
@@ -667,21 +1392,96 @@
                       <tr>
                         <th class="bigFontM2">
                           {{ doc.postLb && doc.postLb.result2D[0] }}
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postLb && doc.postLb.result2D[0])"
+                            color="red"
+                            indeterminate
+                          ></v-progress-circular>
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postLb && doc.postLb.result2D[0])"
+                            color="red"
+                            indeterminate
+                          ></v-progress-circular>
                         </th>
                         <th class="bigFontM2">
                           {{ doc.postLb && doc.postLb.result2D[1] }}
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postLb && doc.postLb.result2D[1])"
+                            color="red"
+                            indeterminate
+                          ></v-progress-circular>
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postLb && doc.postLb.result2D[1])"
+                            color="red"
+                            indeterminate
+                          ></v-progress-circular>
                         </th>
 
                         <th class="bigFontM2">
                           {{ doc.postLb && doc.postLb.result3D[0] }}
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postLb && doc.postLb.result3D[0])"
+                            color="red"
+                            indeterminate
+                          ></v-progress-circular>
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postLb && doc.postLb.result3D[0])"
+                            color="red"
+                            indeterminate
+                          ></v-progress-circular>
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postLb && doc.postLb.result3D[0])"
+                            color="red"
+                            indeterminate
+                          ></v-progress-circular>
                         </th>
                         <th class="bigFontM2">
                           {{ doc.postLb && doc.postLb.result3D[1] }}
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postLb && doc.postLb.result3D[1])"
+                            color="red"
+                            indeterminate
+                          ></v-progress-circular>
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postLb && doc.postLb.result3D[1])"
+                            color="red"
+                            indeterminate
+                          ></v-progress-circular>
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="!(doc.postLb && doc.postLb.result3D[1])"
+                            color="red"
+                            indeterminate
+                          ></v-progress-circular>
                         </th>
                       </tr>
 
                       <tr>
-                        <th colspan="2" rowspan="6" class="bigLabelFontLoM">
+                        <th
+                          :style="
+                            doc.postLb.result2D.length > 0
+                              ? ''
+                              : 'height: 170px'
+                          "
+                          colspan="2"
+                          rowspan="6"
+                          class="bigLabelFontLoM"
+                        >
                           <span
                             style="margin-bottom: 0px !important"
                             v-for="(myResult, ind) in filterRemove2(
@@ -692,6 +1492,23 @@
                             <br v-if="ind % 4 == 0 && ind > 0" />
                             &nbsp;&nbsp;&nbsp;{{ myResult }}
                           </span>
+                          <v-progress-circular
+                            size="20"
+                            v-if="
+                              !(doc.postLb && doc.postLb.result2D.length > 0)
+                            "
+                            color="primary"
+                            indeterminate
+                          ></v-progress-circular>
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="
+                              !(doc.postLb && doc.postLb.result2D.length > 0)
+                            "
+                            color="primary"
+                            indeterminate
+                          ></v-progress-circular>
                         </th>
                         <th colspan="2" rowspan="6" class="bigLabelFontLoRedM">
                           <span
@@ -704,6 +1521,31 @@
                             <br v-if="ind % 4 == 0 && ind > 0" />
                             &nbsp;&nbsp;&nbsp;{{ myResult }}
                           </span>
+
+                          <v-progress-circular
+                            size="20"
+                            v-if="
+                              !(doc.postLb && doc.postLb.result3D.length > 0)
+                            "
+                            color="red"
+                            indeterminate
+                          ></v-progress-circular>
+                          <v-progress-circular
+                            size="20"
+                            v-if="
+                              !(doc.postLb && doc.postLb.result3D.length > 0)
+                            "
+                            color="red"
+                            indeterminate
+                          ></v-progress-circular>
+                          <v-progress-circular
+                            size="20"
+                            v-if="
+                              !(doc.postLb && doc.postLb.result3D.length > 0)
+                            "
+                            color="red"
+                            indeterminate
+                          ></v-progress-circular>
                         </th>
                       </tr>
                     </tbody>
@@ -852,7 +1694,11 @@ export default {
     },
     fetchResultWithTime(time) {
       let vm = this;
-      let url = provider.baseURL + `/result/fetch?time=${time}`;
+      let url =
+        provider.baseURL +
+        `/result/fetch?date=${moment(vm.param.date).format(
+          "YYYY-MM-DD"
+        )}&time=${time}`;
       return new Promise((resolve, reject) => {
         axios.get(url, { headers: { token: provider.token } }).then(
           (res) => {
@@ -1047,5 +1893,11 @@ table {
   overflow-x: visible; /* Show all content */
   padding: 0; /* Remove padding */
   margin: 0; /* Remove margin */
+}
+
+.table td[data-v-9ea40744],
+.table th[data-v-9ea40744] {
+  padding: 0rem !important;
+  vertical-align: middle !important;
 }
 </style>
