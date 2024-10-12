@@ -57,7 +57,7 @@
               class="pt-4"
               style="background-color: red; text-align: center"
             >
-              Cá cược xổ sô Happy Lô
+              kể từ năm 1991
             </v-card-text>
 
             <v-card-text
@@ -810,7 +810,7 @@
               class="pt-4"
               style="background-color: red; text-align: center"
             >
-              <h5>Cá cược xổ sô Happy Lô</h5>
+              <h5>kể từ năm 1991</h5>
             </v-card-text>
 
             <v-card-text
@@ -960,6 +960,7 @@
                           colspan="2"
                           style="vertical-align: middle"
                         >
+                          {{ formatDate(doc.resultDate) }}
                           <h5>việt nam lo 2D & 3D</h5>
                         </th>
                       </tr>
@@ -1093,7 +1094,11 @@
                             )"
                             :key="ind"
                           >
-                            <br v-if="ind % 2 == 0 && ind > 0" />
+                            <!-- <br v-if="ind % 2 == 0 && ind > 0" /> -->
+                            <div
+                              class="custom-break"
+                              v-if="ind % 2 == 0 && ind > 0"
+                            ></div>
                             &nbsp;&nbsp;&nbsp;{{ myResult }}
                           </span>
 
@@ -1122,7 +1127,11 @@
                             )"
                             :key="ind"
                           >
-                            <br v-if="ind % 2 == 1 && ind > 0" />
+                            <!-- <br v-if="ind % 2 == 1 && ind > 0" /> -->
+                            <div
+                              class="custom-break1"
+                              v-if="ind % 2 == 1 && ind > 0"
+                            ></div>
                             &nbsp;&nbsp;&nbsp;{{ myResult }}
                           </span>
                           <v-progress-circular
@@ -1385,6 +1394,7 @@
                           colspan="2"
                           style="vertical-align: middle"
                         >
+                          {{ formatDate(doc.resultDate) }}
                           <h5>3D việt nam lo x50</h5>
                         </th>
                       </tr>
@@ -1793,14 +1803,14 @@ table {
 .bigLabelFontLo {
   font-weight: bold;
   color: #5ca3d6;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .bigLabelFontLoRed {
   font-weight: bold;
   color: red;
 
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .bigLabelFont2 {
@@ -1887,17 +1897,13 @@ table {
     flex-direction: row;
   }
 }
-
-.compact-date-picker {
-  width: auto; /* Allow it to shrink */
-  overflow-x: visible; /* Show all content */
-  padding: 0; /* Remove padding */
-  margin: 0; /* Remove margin */
+.custom-break {
+  height: 4px; /* Set your desired height */
+  display: block; /* Ensure it behaves like a block element */
 }
 
-.table td[data-v-9ea40744],
-.table th[data-v-9ea40744] {
-  padding: 0rem !important;
-  vertical-align: middle !important;
+.custom-break1 {
+  height: 6px; /* Set your desired height */
+  display: block; /* Ensure it behaves like a block element */
 }
 </style>
