@@ -346,23 +346,63 @@
                             <br v-if="ind % 2 == 0 && ind > 0" />
                             &nbsp;&nbsp;&nbsp;{{ myResult }}
                           </span>
-                          <v-progress-circular
-                            size="20"
+                          <span
                             v-if="
                               !(doc.postLa && doc.postLa.result2D.length > 0)
                             "
-                            color="primary"
-                            indeterminate
-                          ></v-progress-circular>
+                          >
+                            <span v-for="ind in 11" :key="ind">
+                              <v-progress-circular
+                                size="15"
+                                :width="1"
+                                v-if="
+                                  !(
+                                    doc.postLa && doc.postLa.result2D.length > 0
+                                  )
+                                "
+                                color="primary"
+                                indeterminate
+                              ></v-progress-circular>
 
-                          <v-progress-circular
-                            size="20"
-                            v-if="
-                              !(doc.postLa && doc.postLa.result2D.length > 0)
-                            "
-                            color="primary"
-                            indeterminate
-                          ></v-progress-circular>
+                              <v-progress-circular
+                                size="15"
+                                :width="1"
+                                v-if="
+                                  !(
+                                    doc.postLa && doc.postLa.result2D.length > 0
+                                  )
+                                "
+                                color="primary"
+                                indeterminate
+                              ></v-progress-circular>
+
+                              &nbsp;
+                              <v-progress-circular
+                                size="15"
+                                :width="1"
+                                v-if="
+                                  !(
+                                    doc.postLa && doc.postLa.result2D.length > 0
+                                  )
+                                "
+                                color="primary"
+                                indeterminate
+                              ></v-progress-circular>
+
+                              <v-progress-circular
+                                size="15"
+                                :width="1"
+                                v-if="
+                                  !(
+                                    doc.postLa && doc.postLa.result2D.length > 0
+                                  )
+                                "
+                                color="primary"
+                                indeterminate
+                              ></v-progress-circular>
+                              <br />
+                            </span>
+                          </span>
                         </th>
                         <th rowspan="6" class="bigLabelFontLoRed">
                           <span
@@ -375,32 +415,87 @@
                             <br v-if="ind % 2 == 0 && ind > 0" />
                             &nbsp;&nbsp;&nbsp;{{ myResult }}
                           </span>
-                          <v-progress-circular
-                            size="20"
+                          <span
                             v-if="
                               !(doc.postLa && doc.postLa.result3D.length > 0)
                             "
-                            color="red"
-                            indeterminate
-                          ></v-progress-circular>
+                          >
+                            <span v-for="ind in 9" :key="ind">
+                              <v-progress-circular
+                                size="15"
+                                :width="1"
+                                v-if="
+                                  !(
+                                    doc.postLa && doc.postLa.result3D.length > 0
+                                  )
+                                "
+                                color="red"
+                                indeterminate
+                              ></v-progress-circular>
 
-                          <v-progress-circular
-                            size="20"
-                            v-if="
-                              !(doc.postLa && doc.postLa.result3D.length > 0)
-                            "
-                            color="red"
-                            indeterminate
-                          ></v-progress-circular>
+                              <v-progress-circular
+                                size="15"
+                                :width="1"
+                                v-if="
+                                  !(
+                                    doc.postLa && doc.postLa.result3D.length > 0
+                                  )
+                                "
+                                color="red"
+                                indeterminate
+                              ></v-progress-circular>
 
-                          <v-progress-circular
-                            size="20"
-                            v-if="
-                              !(doc.postLa && doc.postLa.result3D.length > 0)
-                            "
-                            color="red"
-                            indeterminate
-                          ></v-progress-circular>
+                              <v-progress-circular
+                                size="15"
+                                :width="1"
+                                v-if="
+                                  !(
+                                    doc.postLa && doc.postLa.result3D.length > 0
+                                  )
+                                "
+                                color="red"
+                                indeterminate
+                              ></v-progress-circular>
+
+                              &nbsp;
+                              <v-progress-circular
+                                size="15"
+                                :width="1"
+                                v-if="
+                                  !(
+                                    doc.postLa && doc.postLa.result3D.length > 0
+                                  )
+                                "
+                                color="red"
+                                indeterminate
+                              ></v-progress-circular>
+
+                              <v-progress-circular
+                                size="15"
+                                :width="1"
+                                v-if="
+                                  !(
+                                    doc.postLa && doc.postLa.result3D.length > 0
+                                  )
+                                "
+                                color="red"
+                                indeterminate
+                              ></v-progress-circular>
+
+                              <v-progress-circular
+                                size="15"
+                                :width="1"
+                                v-if="
+                                  !(
+                                    doc.postLa && doc.postLa.result3D.length > 0
+                                  )
+                                "
+                                color="red"
+                                indeterminate
+                              ></v-progress-circular>
+                              <br />
+                            </span>
+                          </span>
                         </th>
                       </tr>
 
@@ -737,24 +832,110 @@
                             <br v-if="ind % 4 == 0 && ind > 0" />
                             &nbsp;&nbsp;&nbsp;{{ myResult }}
                           </span>
-
-                          <v-progress-circular
-                            size="20"
+                          <span
                             v-if="
                               !(doc.postLb && doc.postLb.result2D.length > 0)
                             "
-                            color="primary"
-                            indeterminate
-                          ></v-progress-circular>
+                          >
+                            <span v-for="ind in 12" :key="ind">
+                              <v-progress-circular
+                                size="15"
+                                :width="1"
+                                v-if="
+                                  !(
+                                    doc.postLb && doc.postLb.result2D.length > 0
+                                  )
+                                "
+                                color="primary"
+                                indeterminate
+                              ></v-progress-circular>
 
-                          <v-progress-circular
-                            size="20"
-                            v-if="
-                              !(doc.postLb && doc.postLb.result2D.length > 0)
-                            "
-                            color="primary"
-                            indeterminate
-                          ></v-progress-circular>
+                              <v-progress-circular
+                                size="15"
+                                :width="1"
+                                v-if="
+                                  !(
+                                    doc.postLb && doc.postLb.result2D.length > 0
+                                  )
+                                "
+                                color="primary"
+                                indeterminate
+                              ></v-progress-circular>
+                              &nbsp;
+                              <v-progress-circular
+                                size="15"
+                                :width="1"
+                                v-if="
+                                  !(
+                                    doc.postLb && doc.postLb.result2D.length > 0
+                                  )
+                                "
+                                color="primary"
+                                indeterminate
+                              ></v-progress-circular>
+
+                              <v-progress-circular
+                                size="15"
+                                :width="1"
+                                v-if="
+                                  !(
+                                    doc.postLb && doc.postLb.result2D.length > 0
+                                  )
+                                "
+                                color="primary"
+                                indeterminate
+                              ></v-progress-circular>
+                              &nbsp;
+                              <v-progress-circular
+                                size="15"
+                                :width="1"
+                                v-if="
+                                  !(
+                                    doc.postLb && doc.postLb.result2D.length > 0
+                                  )
+                                "
+                                color="primary"
+                                indeterminate
+                              ></v-progress-circular>
+
+                              <v-progress-circular
+                                size="15"
+                                :width="1"
+                                v-if="
+                                  !(
+                                    doc.postLb && doc.postLb.result2D.length > 0
+                                  )
+                                "
+                                color="primary"
+                                indeterminate
+                              ></v-progress-circular>
+                              &nbsp;
+                              <v-progress-circular
+                                size="15"
+                                :width="1"
+                                v-if="
+                                  !(
+                                    doc.postLb && doc.postLb.result2D.length > 0
+                                  )
+                                "
+                                color="primary"
+                                indeterminate
+                              ></v-progress-circular>
+
+                              <v-progress-circular
+                                size="15"
+                                :width="1"
+                                v-if="
+                                  !(
+                                    doc.postLb && doc.postLb.result2D.length > 0
+                                  )
+                                "
+                                color="primary"
+                                indeterminate
+                              ></v-progress-circular>
+                              <br />
+                            </span>
+                          </span>
                         </th>
                         <th colspan="2" rowspan="6" class="bigLabelFontLoRed">
                           <span
@@ -767,30 +948,150 @@
                             <br v-if="ind % 4 == 0 && ind > 0" />
                             &nbsp;&nbsp;&nbsp;{{ myResult }}
                           </span>
-                          <v-progress-circular
-                            size="20"
+                          <span
                             v-if="
                               !(doc.postLb && doc.postLb.result3D.length > 0)
                             "
-                            color="red"
-                            indeterminate
-                          ></v-progress-circular>
-                          <v-progress-circular
-                            size="20"
-                            v-if="
-                              !(doc.postLb && doc.postLb.result3D.length > 0)
-                            "
-                            color="red"
-                            indeterminate
-                          ></v-progress-circular>
-                          <v-progress-circular
-                            size="20"
-                            v-if="
-                              !(doc.postLb && doc.postLb.result3D.length > 0)
-                            "
-                            color="red"
-                            indeterminate
-                          ></v-progress-circular>
+                          >
+                            <span v-for="ind in 12" :key="ind">
+                              <v-progress-circular
+                                size="15"
+                                :width="1"
+                                v-if="
+                                  !(
+                                    doc.postLb && doc.postLb.result3D.length > 0
+                                  )
+                                "
+                                color="red"
+                                indeterminate
+                              ></v-progress-circular>
+                              <v-progress-circular
+                                size="15"
+                                :width="1"
+                                v-if="
+                                  !(
+                                    doc.postLb && doc.postLb.result3D.length > 0
+                                  )
+                                "
+                                color="red"
+                                indeterminate
+                              ></v-progress-circular>
+                              <v-progress-circular
+                                size="15"
+                                :width="1"
+                                v-if="
+                                  !(
+                                    doc.postLb && doc.postLb.result3D.length > 0
+                                  )
+                                "
+                                color="red"
+                                indeterminate
+                              ></v-progress-circular>
+                              &nbsp;
+                              <v-progress-circular
+                                size="15"
+                                :width="1"
+                                v-if="
+                                  !(
+                                    doc.postLb && doc.postLb.result3D.length > 0
+                                  )
+                                "
+                                color="red"
+                                indeterminate
+                              ></v-progress-circular>
+                              <v-progress-circular
+                                size="15"
+                                :width="1"
+                                v-if="
+                                  !(
+                                    doc.postLb && doc.postLb.result3D.length > 0
+                                  )
+                                "
+                                color="red"
+                                indeterminate
+                              ></v-progress-circular>
+                              <v-progress-circular
+                                size="15"
+                                :width="1"
+                                v-if="
+                                  !(
+                                    doc.postLb && doc.postLb.result3D.length > 0
+                                  )
+                                "
+                                color="red"
+                                indeterminate
+                              ></v-progress-circular>
+                              &nbsp;
+                              <v-progress-circular
+                                size="15"
+                                :width="1"
+                                v-if="
+                                  !(
+                                    doc.postLb && doc.postLb.result3D.length > 0
+                                  )
+                                "
+                                color="red"
+                                indeterminate
+                              ></v-progress-circular>
+                              <v-progress-circular
+                                size="15"
+                                :width="1"
+                                v-if="
+                                  !(
+                                    doc.postLb && doc.postLb.result3D.length > 0
+                                  )
+                                "
+                                color="red"
+                                indeterminate
+                              ></v-progress-circular>
+                              <v-progress-circular
+                                size="15"
+                                :width="1"
+                                v-if="
+                                  !(
+                                    doc.postLb && doc.postLb.result3D.length > 0
+                                  )
+                                "
+                                color="red"
+                                indeterminate
+                              ></v-progress-circular>
+                              &nbsp;
+                              <v-progress-circular
+                                size="15"
+                                :width="1"
+                                v-if="
+                                  !(
+                                    doc.postLb && doc.postLb.result3D.length > 0
+                                  )
+                                "
+                                color="red"
+                                indeterminate
+                              ></v-progress-circular>
+                              <v-progress-circular
+                                size="15"
+                                :width="1"
+                                v-if="
+                                  !(
+                                    doc.postLb && doc.postLb.result3D.length > 0
+                                  )
+                                "
+                                color="red"
+                                indeterminate
+                              ></v-progress-circular>
+                              <v-progress-circular
+                                size="15"
+                                :width="1"
+                                v-if="
+                                  !(
+                                    doc.postLb && doc.postLb.result3D.length > 0
+                                  )
+                                "
+                                color="red"
+                                indeterminate
+                              ></v-progress-circular>
+                              <br />
+                            </span>
+                          </span>
                         </th>
                       </tr>
                     </tbody>
@@ -971,14 +1272,16 @@
                           {{ (doc.postA && doc.postA.result2D) || "" }}
 
                           <v-progress-circular
-                            size="20"
+                            size="12"
+                            :width="1"
                             v-if="!(doc.postA && doc.postA.result2D)"
                             color="red"
                             indeterminate
                           ></v-progress-circular>
 
                           <v-progress-circular
-                            size="20"
+                            size="12"
+                            :width="1"
                             v-if="!(doc.postA && doc.postA.result2D)"
                             color="red"
                             indeterminate
@@ -986,14 +1289,16 @@
                           >-{{ (doc.postA && doc.postA.result3D) || "" }}
 
                           <v-progress-circular
-                            size="20"
+                            size="12"
+                            :width="1"
                             v-if="!(doc.postA && doc.postA.result2D)"
                             color="red"
                             indeterminate
                           ></v-progress-circular>
 
                           <v-progress-circular
-                            size="20"
+                            size="12"
+                            :width="1"
                             v-if="!(doc.postA && doc.postA.result2D)"
                             color="red"
                             indeterminate
@@ -1003,14 +1308,16 @@
                           {{ (doc.postLa && doc.postLa.result2D[0]) || "" }}
 
                           <v-progress-circular
-                            size="20"
+                            size="12"
+                            :width="1"
                             v-if="!(doc.postLa && doc.postLa.result2D[0])"
                             color="red"
                             indeterminate
                           ></v-progress-circular>
 
                           <v-progress-circular
-                            size="20"
+                            size="12"
+                            :width="1"
                             v-if="!(doc.postLa && doc.postLa.result2D[0])"
                             color="red"
                             indeterminate
@@ -1020,21 +1327,24 @@
                           {{ (doc.postLa && doc.postLa.result3D[0]) || "" }}
 
                           <v-progress-circular
-                            size="20"
+                            size="12"
+                            :width="1"
                             v-if="!(doc.postLa && doc.postLa.result3D[0])"
                             color="red"
                             indeterminate
                           ></v-progress-circular>
 
                           <v-progress-circular
-                            size="20"
+                            size="12"
+                            :width="1"
                             v-if="!(doc.postLa && doc.postLa.result3D[0])"
                             color="red"
                             indeterminate
                           ></v-progress-circular>
 
                           <v-progress-circular
-                            size="20"
+                            size="12"
+                            :width="1"
                             v-if="!(doc.postLa && doc.postLa.result3D[0])"
                             color="red"
                             indeterminate
@@ -1048,14 +1358,16 @@
                           {{ (doc.postB && doc.postB.result2D) || "" }}
 
                           <v-progress-circular
-                            size="20"
+                            size="12"
+                            :width="1"
                             v-if="!(doc.postB && doc.postB.result2D)"
                             color="primary"
                             indeterminate
                           ></v-progress-circular>
 
                           <v-progress-circular
-                            size="20"
+                            size="12"
+                            :width="1"
                             v-if="!(doc.postB && doc.postB.result2D)"
                             color="primary"
                             indeterminate
@@ -1063,20 +1375,23 @@
                           >-{{ (doc.postB && doc.postB.result3D) || "" }}
 
                           <v-progress-circular
-                            size="20"
+                            size="12"
+                            :width="1"
                             v-if="!(doc.postB && doc.postB.result3D)"
                             color="primary"
                             indeterminate
                           ></v-progress-circular>
 
                           <v-progress-circular
-                            size="20"
+                            size="12"
+                            :width="1"
                             v-if="!(doc.postB && doc.postB.result3D)"
                             color="primary"
                             indeterminate
                           ></v-progress-circular>
                           <v-progress-circular
-                            size="20"
+                            size="12"
+                            :width="1"
                             v-if="!(doc.postB && doc.postB.result3D)"
                             color="primary"
                             indeterminate
@@ -1102,22 +1417,63 @@
                             &nbsp;&nbsp;&nbsp;{{ myResult }}
                           </span>
 
-                          <v-progress-circular
-                            size="20"
+                          <span
                             v-if="
                               !(doc.postLa && doc.postLa.result2D.length > 0)
                             "
-                            color="primary"
-                            indeterminate
-                          ></v-progress-circular>
-                          <v-progress-circular
-                            size="20"
-                            v-if="
-                              !(doc.postLa && doc.postLa.result2D.length > 0)
-                            "
-                            color="primary"
-                            indeterminate
-                          ></v-progress-circular>
+                          >
+                            <span v-for="ind in 11" :key="ind">
+                              <v-progress-circular
+                                size="12"
+                                :width="1"
+                                v-if="
+                                  !(
+                                    doc.postLa && doc.postLa.result2D.length > 0
+                                  )
+                                "
+                                color="primary"
+                                indeterminate
+                              ></v-progress-circular>
+
+                              <v-progress-circular
+                                size="12"
+                                :width="1"
+                                v-if="
+                                  !(
+                                    doc.postLa && doc.postLa.result2D.length > 0
+                                  )
+                                "
+                                color="primary"
+                                indeterminate
+                              ></v-progress-circular>
+
+                              &nbsp;
+                              <v-progress-circular
+                                size="12"
+                                :width="1"
+                                v-if="
+                                  !(
+                                    doc.postLa && doc.postLa.result2D.length > 0
+                                  )
+                                "
+                                color="primary"
+                                indeterminate
+                              ></v-progress-circular>
+
+                              <v-progress-circular
+                                size="12"
+                                :width="1"
+                                v-if="
+                                  !(
+                                    doc.postLa && doc.postLa.result2D.length > 0
+                                  )
+                                "
+                                color="primary"
+                                indeterminate
+                              ></v-progress-circular>
+                              <br />
+                            </span>
+                          </span>
                         </th>
                         <th rowspan="6" class="bigLabelFontLoRedM">
                           <span
@@ -1134,32 +1490,82 @@
                             ></div>
                             &nbsp;&nbsp;&nbsp;{{ myResult }}
                           </span>
-                          <v-progress-circular
-                            size="20"
+                          <span
                             v-if="
                               !(doc.postLa && doc.postLa.result3D.length > 0)
                             "
-                            color="red"
-                            indeterminate
-                          ></v-progress-circular>
-
-                          <v-progress-circular
-                            size="20"
-                            v-if="
-                              !(doc.postLa && doc.postLa.result3D.length > 0)
-                            "
-                            color="red"
-                            indeterminate
-                          ></v-progress-circular>
-
-                          <v-progress-circular
-                            size="20"
-                            v-if="
-                              !(doc.postLa && doc.postLa.result3D.length > 0)
-                            "
-                            color="red"
-                            indeterminate
-                          ></v-progress-circular>
+                          >
+                            <span v-for="ind in 9" :key="ind">
+                              <v-progress-circular
+                                size="12"
+                                :width="1"
+                                v-if="
+                                  !(
+                                    doc.postLa && doc.postLa.result3D.length > 0
+                                  )
+                                "
+                                color="red"
+                                indeterminate
+                              ></v-progress-circular>
+                              <v-progress-circular
+                                size="12"
+                                :width="1"
+                                v-if="
+                                  !(
+                                    doc.postLa && doc.postLa.result3D.length > 0
+                                  )
+                                "
+                                color="red"
+                                indeterminate
+                              ></v-progress-circular>
+                              <v-progress-circular
+                                size="12"
+                                :width="1"
+                                v-if="
+                                  !(
+                                    doc.postLa && doc.postLa.result3D.length > 0
+                                  )
+                                "
+                                color="red"
+                                indeterminate
+                              ></v-progress-circular>
+                              &nbsp;
+                              <v-progress-circular
+                                size="12"
+                                :width="1"
+                                v-if="
+                                  !(
+                                    doc.postLa && doc.postLa.result3D.length > 0
+                                  )
+                                "
+                                color="red"
+                                indeterminate
+                              ></v-progress-circular>
+                              <v-progress-circular
+                                size="12"
+                                :width="1"
+                                v-if="
+                                  !(
+                                    doc.postLa && doc.postLa.result3D.length > 0
+                                  )
+                                "
+                                color="red"
+                                indeterminate
+                              ></v-progress-circular>
+                              <v-progress-circular
+                                size="12"
+                                :width="1"
+                                v-if="
+                                  !(
+                                    doc.postLa && doc.postLa.result3D.length > 0
+                                  )
+                                "
+                                color="red"
+                                indeterminate
+                              ></v-progress-circular>
+                              <br />
+                            </span>
+                          </span>
                         </th>
                       </tr>
 
@@ -1169,13 +1575,15 @@
                           {{ (doc.postC && doc.postC.result2D) || "" }}
 
                           <v-progress-circular
-                            size="20"
+                            size="12"
+                            :width="1"
                             v-if="!(doc.postC && doc.postC.result2D)"
                             color="primary"
                             indeterminate
                           ></v-progress-circular>
                           <v-progress-circular
-                            size="20"
+                            size="12"
+                            :width="1"
                             v-if="!(doc.postC && doc.postC.result2D)"
                             color="primary"
                             indeterminate
@@ -1183,21 +1591,24 @@
                           >-{{ (doc.postC && doc.postC.result3D) || "" }}
 
                           <v-progress-circular
-                            size="20"
+                            size="12"
+                            :width="1"
                             v-if="!(doc.postC && doc.postC.result3D)"
                             color="primary"
                             indeterminate
                           ></v-progress-circular>
 
                           <v-progress-circular
-                            size="20"
+                            size="12"
+                            :width="1"
                             v-if="!(doc.postC && doc.postC.result3D)"
                             color="primary"
                             indeterminate
                           ></v-progress-circular>
 
                           <v-progress-circular
-                            size="20"
+                            size="12"
+                            :width="1"
                             v-if="!(doc.postC && doc.postC.result3D)"
                             color="primary"
                             indeterminate
@@ -1211,14 +1622,16 @@
                           {{ (doc.postD && doc.postD.result2D) || "" }}
 
                           <v-progress-circular
-                            size="20"
+                            size="12"
+                            :width="1"
                             v-if="!(doc.postD && doc.postD.result2D)"
                             color="primary"
                             indeterminate
                           ></v-progress-circular>
 
                           <v-progress-circular
-                            size="20"
+                            size="12"
+                            :width="1"
                             v-if="!(doc.postD && doc.postD.result2D)"
                             color="primary"
                             indeterminate
@@ -1226,21 +1639,24 @@
                           >-{{ (doc.postD && doc.postD.result3D) || "" }}
 
                           <v-progress-circular
-                            size="20"
+                            size="12"
+                            :width="1"
                             v-if="!(doc.postD && doc.postD.result3D)"
                             color="primary"
                             indeterminate
                           ></v-progress-circular>
 
                           <v-progress-circular
-                            size="20"
+                            size="12"
+                            :width="1"
                             v-if="!(doc.postD && doc.postD.result3D)"
                             color="primary"
                             indeterminate
                           ></v-progress-circular>
 
                           <v-progress-circular
-                            size="20"
+                            size="12"
+                            :width="1"
                             v-if="!(doc.postD && doc.postD.result3D)"
                             color="primary"
                             indeterminate
@@ -1254,14 +1670,16 @@
                           {{ (doc.postF && doc.postF.result2D) || "" }}
 
                           <v-progress-circular
-                            size="20"
+                            size="12"
+                            :width="1"
                             v-if="!(doc.postF && doc.postF.result2D)"
                             color="amber"
                             indeterminate
                           ></v-progress-circular>
 
                           <v-progress-circular
-                            size="20"
+                            size="12"
+                            :width="1"
                             v-if="!(doc.postF && doc.postF.result2D)"
                             color="amber"
                             indeterminate
@@ -1269,21 +1687,24 @@
                           >-{{ (doc.postF && doc.postF.result3D) || "" }}
 
                           <v-progress-circular
-                            size="20"
+                            size="12"
+                            :width="1"
                             v-if="!(doc.postF && doc.postF.result3D)"
                             color="amber"
                             indeterminate
                           ></v-progress-circular>
 
                           <v-progress-circular
-                            size="20"
+                            size="12"
+                            :width="1"
                             v-if="!(doc.postF && doc.postF.result3D)"
                             color="amber"
                             indeterminate
                           ></v-progress-circular>
 
                           <v-progress-circular
-                            size="20"
+                            size="12"
+                            :width="1"
                             v-if="!(doc.postF && doc.postF.result3D)"
                             color="amber"
                             indeterminate
@@ -1297,14 +1718,16 @@
                           {{ (doc.postI && doc.postI.result2D) || "" }}
 
                           <v-progress-circular
-                            size="20"
+                            size="12"
+                            :width="1"
                             v-if="!(doc.postI && doc.postI.result2D)"
                             color="amber"
                             indeterminate
                           ></v-progress-circular>
 
                           <v-progress-circular
-                            size="20"
+                            size="12"
+                            :width="1"
                             v-if="!(doc.postI && doc.postI.result2D)"
                             color="amber"
                             indeterminate
@@ -1312,21 +1735,24 @@
                           >-{{ (doc.postI && doc.postI.result3D) || "" }}
 
                           <v-progress-circular
-                            size="20"
+                            size="12"
+                            :width="1"
                             v-if="!(doc.postI && doc.postI.result3D)"
                             color="amber"
                             indeterminate
                           ></v-progress-circular>
 
                           <v-progress-circular
-                            size="20"
+                            size="12"
+                            :width="1"
                             v-if="!(doc.postI && doc.postI.result3D)"
                             color="amber"
                             indeterminate
                           ></v-progress-circular>
 
                           <v-progress-circular
-                            size="20"
+                            size="12"
+                            :width="1"
                             v-if="!(doc.postI && doc.postI.result3D)"
                             color="amber"
                             indeterminate
@@ -1339,14 +1765,16 @@
                         <th class="bigLabelFontBlackM">
                           {{ (doc.postN && doc.postN.result2D) || "" }}
                           <v-progress-circular
-                            size="20"
+                            size="12"
+                            :width="1"
                             v-if="!(doc.postN && doc.postN.result2D)"
                             color="amber"
                             indeterminate
                           ></v-progress-circular>
 
                           <v-progress-circular
-                            size="20"
+                            size="12"
+                            :width="1"
                             v-if="!(doc.postN && doc.postN.result2D)"
                             color="amber"
                             indeterminate
@@ -1354,21 +1782,24 @@
                           -{{ (doc.postN && doc.postN.result3D) || "" }}
 
                           <v-progress-circular
-                            size="20"
+                            size="12"
+                            :width="1"
                             v-if="!(doc.postN && doc.postN.result3D)"
                             color="amber"
                             indeterminate
                           ></v-progress-circular>
 
                           <v-progress-circular
-                            size="20"
+                            size="12"
+                            :width="1"
                             v-if="!(doc.postN && doc.postN.result3D)"
                             color="amber"
                             indeterminate
                           ></v-progress-circular>
 
                           <v-progress-circular
-                            size="20"
+                            size="12"
+                            :width="1"
                             v-if="!(doc.postN && doc.postN.result3D)"
                             color="amber"
                             indeterminate
@@ -1403,14 +1834,16 @@
                         <th class="bigFontM2">
                           {{ doc.postLb && doc.postLb.result2D[0] }}
                           <v-progress-circular
-                            size="20"
+                            size="12"
+                            :width="1"
                             v-if="!(doc.postLb && doc.postLb.result2D[0])"
                             color="red"
                             indeterminate
                           ></v-progress-circular>
 
                           <v-progress-circular
-                            size="20"
+                            size="12"
+                            :width="1"
                             v-if="!(doc.postLb && doc.postLb.result2D[0])"
                             color="red"
                             indeterminate
@@ -1419,14 +1852,16 @@
                         <th class="bigFontM2">
                           {{ doc.postLb && doc.postLb.result2D[1] }}
                           <v-progress-circular
-                            size="20"
+                            size="12"
+                            :width="1"
                             v-if="!(doc.postLb && doc.postLb.result2D[1])"
                             color="red"
                             indeterminate
                           ></v-progress-circular>
 
                           <v-progress-circular
-                            size="20"
+                            size="12"
+                            :width="1"
                             v-if="!(doc.postLb && doc.postLb.result2D[1])"
                             color="red"
                             indeterminate
@@ -1435,22 +1870,26 @@
 
                         <th class="bigFontM2">
                           {{ doc.postLb && doc.postLb.result3D[0] }}
+
                           <v-progress-circular
-                            size="20"
+                            size="12"
+                            :width="1"
                             v-if="!(doc.postLb && doc.postLb.result3D[0])"
                             color="red"
                             indeterminate
                           ></v-progress-circular>
 
                           <v-progress-circular
-                            size="20"
+                            size="12"
+                            :width="1"
                             v-if="!(doc.postLb && doc.postLb.result3D[0])"
                             color="red"
                             indeterminate
                           ></v-progress-circular>
 
                           <v-progress-circular
-                            size="20"
+                            size="12"
+                            :width="1"
                             v-if="!(doc.postLb && doc.postLb.result3D[0])"
                             color="red"
                             indeterminate
@@ -1459,21 +1898,24 @@
                         <th class="bigFontM2">
                           {{ doc.postLb && doc.postLb.result3D[1] }}
                           <v-progress-circular
-                            size="20"
+                            size="12"
+                            :width="1"
                             v-if="!(doc.postLb && doc.postLb.result3D[1])"
                             color="red"
                             indeterminate
                           ></v-progress-circular>
 
                           <v-progress-circular
-                            size="20"
+                            size="12"
+                            :width="1"
                             v-if="!(doc.postLb && doc.postLb.result3D[1])"
                             color="red"
                             indeterminate
                           ></v-progress-circular>
 
                           <v-progress-circular
-                            size="20"
+                            size="12"
+                            :width="1"
                             v-if="!(doc.postLb && doc.postLb.result3D[1])"
                             color="red"
                             indeterminate
@@ -1502,23 +1944,91 @@
                             <br v-if="ind % 4 == 0 && ind > 0" />
                             &nbsp;&nbsp;&nbsp;{{ myResult }}
                           </span>
-                          <v-progress-circular
-                            size="20"
-                            v-if="
-                              !(doc.postLb && doc.postLb.result2D.length > 0)
-                            "
-                            color="primary"
-                            indeterminate
-                          ></v-progress-circular>
 
-                          <v-progress-circular
-                            size="20"
+                          <span
                             v-if="
                               !(doc.postLb && doc.postLb.result2D.length > 0)
                             "
-                            color="primary"
-                            indeterminate
-                          ></v-progress-circular>
+                          >
+                            <span v-for="ind in 15" :key="ind">
+                              <v-progress-circular
+                                size="12"
+                                :width="1"
+                                v-if="
+                                  !(
+                                    doc.postLb && doc.postLb.result2D.length > 0
+                                  )
+                                "
+                                color="primary"
+                                indeterminate
+                              ></v-progress-circular>
+
+                              <v-progress-circular
+                                size="12"
+                                :width="1"
+                                v-if="
+                                  !(
+                                    doc.postLb && doc.postLb.result2D.length > 0
+                                  )
+                                "
+                                color="primary"
+                                indeterminate
+                              ></v-progress-circular>
+
+                              &nbsp;
+
+                              <v-progress-circular
+                                size="12"
+                                :width="1"
+                                v-if="
+                                  !(
+                                    doc.postLb && doc.postLb.result2D.length > 0
+                                  )
+                                "
+                                color="primary"
+                                indeterminate
+                              ></v-progress-circular>
+
+                              <v-progress-circular
+                                size="12"
+                                :width="1"
+                                v-if="
+                                  !(
+                                    doc.postLb && doc.postLb.result2D.length > 0
+                                  )
+                                "
+                                color="primary"
+                                indeterminate
+                              ></v-progress-circular>
+                              &nbsp;
+
+                              <v-progress-circular
+                                size="12"
+                                :width="1"
+                                v-if="
+                                  !(
+                                    doc.postLb && doc.postLb.result2D.length > 0
+                                  )
+                                "
+                                color="primary"
+                                indeterminate
+                              ></v-progress-circular>
+
+                              <v-progress-circular
+                                size="12"
+                                :width="1"
+                                v-if="
+                                  !(
+                                    doc.postLb && doc.postLb.result2D.length > 0
+                                  )
+                                "
+                                color="primary"
+                                indeterminate
+                              ></v-progress-circular>
+
+                              <br />
+                            </span>
+                          </span>
                         </th>
                         <th colspan="2" rowspan="6" class="bigLabelFontLoRedM">
                           <span
@@ -1532,30 +2042,119 @@
                             &nbsp;&nbsp;&nbsp;{{ myResult }}
                           </span>
 
-                          <v-progress-circular
-                            size="20"
+                          <span
                             v-if="
                               !(doc.postLb && doc.postLb.result3D.length > 0)
                             "
-                            color="red"
-                            indeterminate
-                          ></v-progress-circular>
-                          <v-progress-circular
-                            size="20"
-                            v-if="
-                              !(doc.postLb && doc.postLb.result3D.length > 0)
-                            "
-                            color="red"
-                            indeterminate
-                          ></v-progress-circular>
-                          <v-progress-circular
-                            size="20"
-                            v-if="
-                              !(doc.postLb && doc.postLb.result3D.length > 0)
-                            "
-                            color="red"
-                            indeterminate
-                          ></v-progress-circular>
+                          >
+                            <span v-for="ind in 15" :key="ind">
+                              <v-progress-circular
+                                size="12"
+                                :width="1"
+                                v-if="
+                                  !(
+                                    doc.postLb && doc.postLb.result3D.length > 0
+                                  )
+                                "
+                                color="red"
+                                indeterminate
+                              ></v-progress-circular>
+                              <v-progress-circular
+                                size="12"
+                                :width="1"
+                                v-if="
+                                  !(
+                                    doc.postLb && doc.postLb.result3D.length > 0
+                                  )
+                                "
+                                color="red"
+                                indeterminate
+                              ></v-progress-circular>
+                              <v-progress-circular
+                                size="12"
+                                :width="1"
+                                v-if="
+                                  !(
+                                    doc.postLb && doc.postLb.result3D.length > 0
+                                  )
+                                "
+                                color="red"
+                                indeterminate
+                              ></v-progress-circular>
+                              &nbsp;
+
+                              <v-progress-circular
+                                size="12"
+                                :width="1"
+                                v-if="
+                                  !(
+                                    doc.postLb && doc.postLb.result3D.length > 0
+                                  )
+                                "
+                                color="red"
+                                indeterminate
+                              ></v-progress-circular>
+                              <v-progress-circular
+                                size="12"
+                                :width="1"
+                                v-if="
+                                  !(
+                                    doc.postLb && doc.postLb.result3D.length > 0
+                                  )
+                                "
+                                color="red"
+                                indeterminate
+                              ></v-progress-circular>
+                              <v-progress-circular
+                                size="12"
+                                :width="1"
+                                v-if="
+                                  !(
+                                    doc.postLb && doc.postLb.result3D.length > 0
+                                  )
+                                "
+                                color="red"
+                                indeterminate
+                              ></v-progress-circular>
+                              &nbsp;
+
+                              <v-progress-circular
+                                size="12"
+                                :width="1"
+                                v-if="
+                                  !(
+                                    doc.postLb && doc.postLb.result3D.length > 0
+                                  )
+                                "
+                                color="red"
+                                indeterminate
+                              ></v-progress-circular>
+                              <v-progress-circular
+                                size="12"
+                                :width="1"
+                                v-if="
+                                  !(
+                                    doc.postLb && doc.postLb.result3D.length > 0
+                                  )
+                                "
+                                color="red"
+                                indeterminate
+                              ></v-progress-circular>
+                              <v-progress-circular
+                                size="12"
+                                :width="1"
+                                v-if="
+                                  !(
+                                    doc.postLb && doc.postLb.result3D.length > 0
+                                  )
+                                "
+                                color="red"
+                                indeterminate
+                              ></v-progress-circular>
+
+                              <br />
+                            </span>
+                          </span>
                         </th>
                       </tr>
                     </tbody>
