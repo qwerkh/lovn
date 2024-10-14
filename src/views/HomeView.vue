@@ -2182,7 +2182,7 @@
 </template>
 
 <script>
-import moment, { min } from "moment";
+import moment from "moment";
 import axios from "axios";
 import { provider } from "../services/provider";
 export default {
@@ -2344,7 +2344,10 @@ export default {
     updateTime() {
       const now = new Date();
       this.currentTime = now.toLocaleTimeString(); // Format the time
-      if (moment(now).format("mmss") == "0030") {
+      if (
+        ["0030", "0003", "1503", "1530"].indexOf(moment(now).format("mmss")) >
+        -1
+      ) {
         this.fetchResult();
       }
 
