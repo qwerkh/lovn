@@ -182,12 +182,21 @@
                       border-radius: 10px;
                       margin-left: 10px;
                     "
-                    >{{ formatDate(doc.resultDate) }} - {{ $t(doc.time) }}
+                  >
+                    {{ $t(doc.time) }}
                   </span>
 
-                  <span v-if="!$vuetify.display.mobile" style="float: right"
-                    ><h2>thời gian còn lại</h2>
-                    <h1>{{ currentTime }}</h1>
+                  <span v-if="!$vuetify.display.mobile" style="float: right">
+                    <h2 v-if="!(doc.postA && doc.postA.result2D)">
+                      thời gian còn lại
+                    </h2>
+                    <h1 v-if="!(doc.postA && doc.postA.result2D)">
+                      {{ timeLeft }}
+                    </h1>
+                    <h2 v-if="doc.postA && doc.postA.result2D">ngày kết quả</h2>
+                    <h1 v-if="doc.postA && doc.postA.result2D">
+                      {{ formatDate(doc.resultDate) }}
+                    </h1>
                   </span>
                 </v-card-text>
               </v-card>
@@ -1238,9 +1247,12 @@
                   >
                     {{ $t(doc.time) }}
                   </span>
-                  <span v-if="$vuetify.display.mobile" style="float: right"
+                  <span style="float: right"
                     ><h5>thời gian còn lại</h5>
-                    <h4>{{ currentTime }}</h4>
+                    <h4 v-if="!(doc.postA && doc.postA.result2D)">
+                      {{ timeLeft }}
+                    </h4>
+                    <h4 v-if="doc.postA && doc.postA.result2D">00:00</h4>
                   </span>
                 </v-card-text>
               </v-card>
@@ -2170,7 +2182,7 @@
 </template>
 
 <script>
-import moment from "moment";
+import moment, { min } from "moment";
 import axios from "axios";
 import { provider } from "../services/provider";
 export default {
@@ -2184,6 +2196,7 @@ export default {
       },
       items: [],
       currentTime: "",
+      timeLeft: "",
       menuDate: false,
       dateFormatted: moment().format("DD/MM/YYYY"),
       resultList: [],
@@ -2334,6 +2347,13 @@ export default {
       if (moment(now).format("mmss") == "0030") {
         this.fetchResult();
       }
+
+      let ramainInMs =
+        new Date(moment().format("YYYY-MM-DD HH:" + "59:59")) - new Date();
+      let minute = Math.floor(ramainInMs / 1000 / 60);
+      let second = Math.floor(ramainInMs / 1000 - minute * 60);
+      this.timeLeft =
+        `${minute}`.padStart(2, "0") + ":" + `${second}`.padStart(2, "0");
     },
   },
   created() {
