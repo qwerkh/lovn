@@ -1279,6 +1279,12 @@
             :src="configDoc.advertiseLeftUrl2"
             cover
           ></v-img>
+
+          <v-img
+            class="bg-grey-lighten-2"
+            :src="configDoc.advertiseLeftUrl3"
+            cover
+          ></v-img>
         </v-col>
         <v-col cols="9" sm="10" md="10" style="padding-right: 0px">
           <v-row>
