@@ -55,9 +55,13 @@
           <v-card>
             <v-card-text
               class="pt-4"
-              style="background-color: red; text-align: center"
+              style="
+                background-color: red;
+                text-align: center;
+                font-weight: bold;
+              "
             >
-              kể từ năm 1991
+              <h3>kể từ năm 1991</h3>
             </v-card-text>
 
             <v-card-text
@@ -71,10 +75,10 @@
         <v-col cols="7" md="9" sm="9">
           <v-card>
             <v-img
-              class="bg-grey-lighten-2"
-              height="120"
+              class="bg-grey-lighten-2 d-flex align-center justify-center"
               :src="configDoc.bannerUrl"
               cover
+              aspect-ratio="9/16"
             ></v-img>
           </v-card>
         </v-col>
@@ -1127,8 +1131,7 @@
               </v-row>
 
               <v-img
-                class="bg-grey-lighten-2"
-                height="100"
+                class="bg-grey-lighten-2 d-flex align-center justify-center"
                 :src="
                   k == 1
                     ? configDoc.advertiseUrl1
@@ -1136,7 +1139,7 @@
                     ? configDoc.advertiseUrl2
                     : configDoc.advertiseUrl3
                 "
-                cover
+                aspect-ratio="9/16"
               ></v-img>
             </v-col>
           </v-row>
@@ -1149,9 +1152,13 @@
           <v-card>
             <v-card-text
               class="pt-4"
-              style="background-color: red; text-align: center"
+              style="
+                background-color: red;
+                text-align: center;
+                font-weight: bold;
+              "
             >
-              <h5>kể từ năm 1991</h5>
+              <h3>kể từ năm 1991</h3>
             </v-card-text>
 
             <v-card-text
@@ -1164,11 +1171,14 @@
         </v-col>
         <v-col cols="7" md="9" sm="9">
           <v-card>
-            <v-img
-              class="bg-grey-lighten-2"
-              :src="configDoc.bannerUrl"
-              cover
-            ></v-img>
+            <v-card>
+              <v-img
+                class="bg-grey-lighten-2"
+                height="110px"
+                :src="configDoc.bannerPhoneUrl"
+                cover
+              ></v-img>
+            </v-card>
           </v-card>
         </v-col>
       </v-row>
@@ -1176,11 +1186,15 @@
         <v-col cols="3" sm="2" md="2" style="padding: 0px; margin: 0px">
           <v-menu transition="slide-y-transition">
             <template v-slot:activator="{ props }">
-              <v-text-field
-                v-model="dateFormatted"
-                readonly
+              <span
+                style="
+                  padding-left: 13px;
+                  border-radius: 6px;
+                  background-color: whitesmoke;
+                "
                 v-bind="props"
-              ></v-text-field>
+                v-text="dateFormatted"
+              ></span>
             </template>
             <v-date-picker v-model="param.date" color="primary"></v-date-picker>
           </v-menu>
@@ -1286,7 +1300,12 @@
             cover
           ></v-img>
         </v-col>
-        <v-col cols="9" sm="10" md="10" style="padding-right: 0px">
+        <v-col
+          cols="9"
+          sm="10"
+          md="10"
+          style="padding-right: 0px !important; padding-top: 0px !important"
+        >
           <v-row>
             <v-col
               cols="12"
@@ -2256,8 +2275,7 @@
                 </v-col>
               </v-row>
               <v-img
-                class="bg-grey-lighten-2"
-                height="100"
+                class="bg-grey-lighten-2 d-flex align-center justify-center"
                 :src="
                   k == 1
                     ? configDoc.advertiseUrl1
@@ -2265,7 +2283,7 @@
                     ? configDoc.advertiseUrl2
                     : configDoc.advertiseUrl3
                 "
-                cover
+                aspect-ratio="9/16"
               ></v-img>
             </v-col>
           </v-row>
