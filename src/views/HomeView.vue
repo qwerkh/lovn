@@ -72,8 +72,8 @@
           <v-card>
             <v-img
               class="bg-grey-lighten-2"
-              height="100"
-              src="https://picsum.photos/350/165?random"
+              height="120"
+              :src="configDoc.bannerUrl"
               cover
             ></v-img>
           </v-card>
@@ -141,6 +141,24 @@
               </v-list-item>
             </v-list>
           </v-card>
+
+          <v-img
+            class="bg-grey-lighten-2"
+            :src="configDoc.advertiseLeftUrl1"
+            cover
+          ></v-img>
+
+          <v-img
+            class="bg-grey-lighten-2"
+            :src="configDoc.advertiseLeftUrl2"
+            cover
+          ></v-img>
+
+          <v-img
+            class="bg-grey-lighten-2"
+            :src="configDoc.advertiseLeftUrl3"
+            cover
+          ></v-img>
         </v-col>
         <v-col cols="8" sm="10" md="10">
           <v-row>
@@ -1107,6 +1125,19 @@
                   </table>
                 </v-col>
               </v-row>
+
+              <v-img
+                class="bg-grey-lighten-2"
+                height="100"
+                :src="
+                  k == 1
+                    ? configDoc.advertiseUrl1
+                    : k == 2
+                    ? configDoc.advertiseUrl2
+                    : configDoc.advertiseUrl3
+                "
+                cover
+              ></v-img>
             </v-col>
           </v-row>
         </v-col>
@@ -1135,7 +1166,7 @@
           <v-card>
             <v-img
               class="bg-grey-lighten-2"
-              src="https://picsum.photos/350/165?random"
+              :src="configDoc.bannerUrl"
               cover
             ></v-img>
           </v-card>
@@ -1203,6 +1234,23 @@
               </v-list-item>
             </v-list>
           </v-card>
+          <v-img
+            class="bg-grey-lighten-2"
+            :src="configDoc.advertiseLeftUrl1"
+            cover
+          ></v-img>
+
+          <v-img
+            class="bg-grey-lighten-2"
+            :src="configDoc.advertiseLeftUrl2"
+            cover
+          ></v-img>
+
+          <v-img
+            class="bg-grey-lighten-2"
+            :src="configDoc.advertiseLeftUrl3"
+            cover
+          ></v-img>
         </v-col>
         <v-col cols="9" sm="10" md="10" style="padding-right: 0px">
           <v-row>
@@ -2173,6 +2221,18 @@
                   </table>
                 </v-col>
               </v-row>
+              <v-img
+                class="bg-grey-lighten-2"
+                height="100"
+                :src="
+                  k == 1
+                    ? configDoc.advertiseUrl1
+                    : k == 2
+                    ? configDoc.advertiseUrl2
+                    : configDoc.advertiseUrl3
+                "
+                cover
+              ></v-img>
             </v-col>
           </v-row>
         </v-col>
@@ -2199,6 +2259,7 @@ export default {
       timeLeft: "",
       menuDate: false,
       dateFormatted: moment().format("DD/MM/YYYY"),
+      configDoc: {},
       resultList: [],
       dayList: [
         { text: "Thứ hai", value: 0 },
@@ -2276,6 +2337,25 @@ export default {
     filterRemove2(list) {
       return list.filter((d, ind) => ind > 1);
     },
+    fetchConfig() {
+      let vm = this;
+      let url = provider.baseURL + `/web_config/fetch`;
+      return new Promise((resolve, reject) => {
+        axios.get(url, { headers: { token: provider.token } }).then(
+          (res) => {
+            if (res.data.code === 201) {
+              resolve(res.data.data);
+              vm.configDoc = (res.data && res.data.data) || {};
+            }
+            vm.loading = false;
+          },
+          (error) => {
+            reject(error);
+            vm.loading = false;
+          }
+        );
+      });
+    },
     fetchResult() {
       let vm = this;
       let url = provider.baseURL + `/result/fetch`;
@@ -2342,25 +2422,29 @@ export default {
       return `${year}-${month.padStart(2, "0")}-${day.padStart(2, "0")}`;
     },
     updateTime() {
+      let vm = this;
       const now = new Date();
-      this.currentTime = now.toLocaleTimeString(); // Format the time
+      vm.currentTime = now.toLocaleTimeString(); // Format the time
       if (
-        ["0030", "0003", "1503", "1530"].indexOf(moment(now).format("mmss")) >
-        -1
+        ["0030", "0003", "0103", "1503", "1530", "1600"].indexOf(
+          moment(now).format("mmss")
+        ) > -1
       ) {
-        this.fetchResult();
+        console.log("Jol");
+        vm.fetchResult();
       }
 
       let ramainInMs =
         new Date(moment().format("YYYY-MM-DD HH:" + "59:59")) - new Date();
       let minute = Math.floor(ramainInMs / 1000 / 60);
       let second = Math.floor(ramainInMs / 1000 - minute * 60);
-      this.timeLeft =
+      vm.timeLeft =
         `${minute}`.padStart(2, "0") + ":" + `${second}`.padStart(2, "0");
     },
   },
   created() {
     this.fetchResult();
+    this.fetchConfig();
   },
 };
 </script>
