@@ -2497,9 +2497,9 @@ export default {
       let minute = Math.floor(ramainInMs / 1000 / 60);
       let second = Math.floor(ramainInMs / 1000 - minute * 60);
       vm.timeLeft =
-        `${minute >= 0 ? minute : 0}`.padStart(2, "0") +
+        `${minute >= 0 && minute < 57 ? minute : 0}`.padStart(2, "0") +
         ":" +
-        `${second >= 0 ? second : 0}`.padStart(2, "0");
+        `${second >= 0 && minute < 57 ? second : 0}`.padStart(2, "0");
     },
   },
   created() {
