@@ -2478,11 +2478,17 @@ export default {
       const now = new Date();
       vm.currentTime = now.toLocaleTimeString(); // Format the time
       if (
-        ["0030", "0003", "0103", "1503", "1530", "1600"].indexOf(
-          moment(now).format("mmss")
-        ) > -1
+        [
+          "0030",
+          "0003",
+          "0001",
+          "0103",
+          "1503",
+          "1501",
+          "1530",
+          "1600",
+        ].indexOf(moment(now).format("mmss")) > -1
       ) {
-        console.log("Jol");
         vm.fetchResult();
       }
 
@@ -2491,7 +2497,9 @@ export default {
       let minute = Math.floor(ramainInMs / 1000 / 60);
       let second = Math.floor(ramainInMs / 1000 - minute * 60);
       vm.timeLeft =
-        `${minute}`.padStart(2, "0") + ":" + `${second}`.padStart(2, "0");
+        `${minute >= 0 ? minute : 0}`.padStart(2, "0") +
+        ":" +
+        `${second >= 0 ? second : 0}`.padStart(2, "0");
     },
   },
   created() {
