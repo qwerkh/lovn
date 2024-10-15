@@ -1512,7 +1512,7 @@
                         </th>
                         <th
                           rowspan="6"
-                          class="bigLabelFontMR"
+                          class="bigLabelFontMRLo"
                           style="text-align: center"
                         >
                           <span
@@ -1922,7 +1922,12 @@
                     </tbody>
                   </table>
                 </v-col>
-                <v-col cols="12" sm="12" md="6">
+                <v-col
+                  cols="12"
+                  sm="12"
+                  md="6"
+                  style="margin-top: -25px; padding-top: 0px !important"
+                >
                   <table
                     class="table table-bordered"
                     style="margin-top: 10px; margin-right: 10px"
@@ -2596,13 +2601,13 @@ table {
 
 .bigFontM {
   font-weight: bold;
-  font-size: 15px;
+  font-size: 20px;
   color: red;
 }
 
 .bigFontM2 {
   font-weight: bold;
-  font-size: 14px;
+  font-size: 20px;
   color: red;
 }
 
@@ -2614,7 +2619,13 @@ table {
 
 .bigLabelFontMR {
   font-weight: bold;
-  font-size: 13px;
+  font-size: 17px;
+  color: #5ca3d6;
+}
+
+.bigLabelFontMRLo {
+  font-weight: bold;
+  font-size: 14px;
   color: #5ca3d6;
 }
 
@@ -2638,7 +2649,7 @@ table {
 
 .bigLabelFontBlackM {
   font-weight: bold;
-  font-size: 13px;
+  font-size: 17px;
 }
 .titleFontM {
   font-weight: bold;
