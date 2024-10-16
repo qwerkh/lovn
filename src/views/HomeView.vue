@@ -2482,31 +2482,6 @@ export default {
       let vm = this;
       const now = new Date();
       vm.currentTime = now.toLocaleTimeString(); // Format the time
-      if (
-        [
-          "0030",
-          "0025",
-          "0020",
-          "0018",
-          "0016",
-          "0013",
-          "0010",
-          "0008",
-          "0005",
-          "0001",
-          "0103",
-          "1503",
-          "1501",
-          "1506",
-          "1510",
-          "1515",
-          "1520",
-          "1530",
-          "1600",
-        ].indexOf(moment(now).format("mmss")) > -1
-      ) {
-        vm.fetchResult();
-      }
 
       let ramainInMs =
         new Date(moment().format("YYYY-MM-DD HH:" + "59:59")) - new Date();
@@ -2516,6 +2491,16 @@ export default {
         `${minute >= 0 && minute < 57 ? minute : 0}`.padStart(2, "0") +
         ":" +
         `${second >= 0 && minute < 57 ? second : 0}`.padStart(2, "0");
+
+      let currentMinute = parseInt(moment(now).format("mm"));
+      let currentSecond = parseInt(moment(now).format("ss"));
+      if (currentMinute < 10 && currentSecond % 5 == 0) {
+        vm.fetchResult();
+      } else if (currentMinute < 25 && currentSecond % 15 == 0) {
+        vm.fetchResult();
+      } else if (currentSecond === 1) {
+        vm.fetchResult();
+      }
     },
   },
   created() {
