@@ -1537,7 +1537,7 @@
                           >
                             <span v-for="ind in 11" :key="ind">
                               <v-progress-circular
-                                size="12"
+                                size="10"
                                 :width="1"
                                 v-if="
                                   !(
@@ -1549,7 +1549,7 @@
                               ></v-progress-circular>
 
                               <v-progress-circular
-                                size="12"
+                                size="10"
                                 :width="1"
                                 v-if="
                                   !(
@@ -1562,7 +1562,7 @@
 
                               &nbsp;
                               <v-progress-circular
-                                size="12"
+                                size="10"
                                 :width="1"
                                 v-if="
                                   !(
@@ -1574,7 +1574,7 @@
                               ></v-progress-circular>
 
                               <v-progress-circular
-                                size="12"
+                                size="10"
                                 :width="1"
                                 v-if="
                                   !(
@@ -1610,7 +1610,7 @@
                           >
                             <span v-for="ind in 9" :key="ind">
                               <v-progress-circular
-                                size="12"
+                                size="10"
                                 :width="1"
                                 v-if="
                                   !(
@@ -1621,7 +1621,7 @@
                                 indeterminate
                               ></v-progress-circular>
                               <v-progress-circular
-                                size="12"
+                                size="10"
                                 :width="1"
                                 v-if="
                                   !(
@@ -1632,7 +1632,7 @@
                                 indeterminate
                               ></v-progress-circular>
                               <v-progress-circular
-                                size="12"
+                                size="10"
                                 :width="1"
                                 v-if="
                                   !(
@@ -1644,7 +1644,7 @@
                               ></v-progress-circular>
                               &nbsp;
                               <v-progress-circular
-                                size="12"
+                                size="10"
                                 :width="1"
                                 v-if="
                                   !(
@@ -1655,7 +1655,7 @@
                                 indeterminate
                               ></v-progress-circular>
                               <v-progress-circular
-                                size="12"
+                                size="10"
                                 :width="1"
                                 v-if="
                                   !(
@@ -1666,7 +1666,7 @@
                                 indeterminate
                               ></v-progress-circular>
                               <v-progress-circular
-                                size="12"
+                                size="10"
                                 :width="1"
                                 v-if="
                                   !(
@@ -2070,7 +2070,7 @@
                           >
                             <span v-for="ind in 15" :key="ind">
                               <v-progress-circular
-                                size="12"
+                                size="10"
                                 :width="1"
                                 v-if="
                                   !(
@@ -2082,7 +2082,7 @@
                               ></v-progress-circular>
 
                               <v-progress-circular
-                                size="12"
+                                size="10"
                                 :width="1"
                                 v-if="
                                   !(
@@ -2096,7 +2096,7 @@
                               &nbsp;
 
                               <v-progress-circular
-                                size="12"
+                                size="10"
                                 :width="1"
                                 v-if="
                                   !(
@@ -2108,7 +2108,7 @@
                               ></v-progress-circular>
 
                               <v-progress-circular
-                                size="12"
+                                size="10"
                                 :width="1"
                                 v-if="
                                   !(
@@ -2121,7 +2121,7 @@
                               &nbsp;
 
                               <v-progress-circular
-                                size="12"
+                                size="10"
                                 :width="1"
                                 v-if="
                                   !(
@@ -2133,7 +2133,7 @@
                               ></v-progress-circular>
 
                               <v-progress-circular
-                                size="12"
+                                size="10"
                                 :width="1"
                                 v-if="
                                   !(
@@ -2167,7 +2167,7 @@
                           >
                             <span v-for="ind in 15" :key="ind">
                               <v-progress-circular
-                                size="12"
+                                size="10"
                                 :width="1"
                                 v-if="
                                   !(
@@ -2178,7 +2178,7 @@
                                 indeterminate
                               ></v-progress-circular>
                               <v-progress-circular
-                                size="12"
+                                size="10"
                                 :width="1"
                                 v-if="
                                   !(
@@ -2189,42 +2189,7 @@
                                 indeterminate
                               ></v-progress-circular>
                               <v-progress-circular
-                                size="12"
-                                :width="1"
-                                v-if="
-                                  !(
-                                    doc.postLb && doc.postLb.result3D.length > 0
-                                  )
-                                "
-                                color="red"
-                                indeterminate
-                              ></v-progress-circular>
-                              &nbsp;
-
-                              <v-progress-circular
-                                size="12"
-                                :width="1"
-                                v-if="
-                                  !(
-                                    doc.postLb && doc.postLb.result3D.length > 0
-                                  )
-                                "
-                                color="red"
-                                indeterminate
-                              ></v-progress-circular>
-                              <v-progress-circular
-                                size="12"
-                                :width="1"
-                                v-if="
-                                  !(
-                                    doc.postLb && doc.postLb.result3D.length > 0
-                                  )
-                                "
-                                color="red"
-                                indeterminate
-                              ></v-progress-circular>
-                              <v-progress-circular
-                                size="12"
+                                size="10"
                                 :width="1"
                                 v-if="
                                   !(
@@ -2237,7 +2202,7 @@
                               &nbsp;
 
                               <v-progress-circular
-                                size="12"
+                                size="10"
                                 :width="1"
                                 v-if="
                                   !(
@@ -2248,7 +2213,7 @@
                                 indeterminate
                               ></v-progress-circular>
                               <v-progress-circular
-                                size="12"
+                                size="10"
                                 :width="1"
                                 v-if="
                                   !(
@@ -2259,7 +2224,42 @@
                                 indeterminate
                               ></v-progress-circular>
                               <v-progress-circular
-                                size="12"
+                                size="10"
+                                :width="1"
+                                v-if="
+                                  !(
+                                    doc.postLb && doc.postLb.result3D.length > 0
+                                  )
+                                "
+                                color="red"
+                                indeterminate
+                              ></v-progress-circular>
+                              &nbsp;
+
+                              <v-progress-circular
+                                size="10"
+                                :width="1"
+                                v-if="
+                                  !(
+                                    doc.postLb && doc.postLb.result3D.length > 0
+                                  )
+                                "
+                                color="red"
+                                indeterminate
+                              ></v-progress-circular>
+                              <v-progress-circular
+                                size="10"
+                                :width="1"
+                                v-if="
+                                  !(
+                                    doc.postLb && doc.postLb.result3D.length > 0
+                                  )
+                                "
+                                color="red"
+                                indeterminate
+                              ></v-progress-circular>
+                              <v-progress-circular
+                                size="10"
                                 :width="1"
                                 v-if="
                                   !(
@@ -2485,11 +2485,22 @@ export default {
       if (
         [
           "0030",
-          "0003",
+          "0025",
+          "0020",
+          "0018",
+          "0016",
+          "0013",
+          "0010",
+          "0008",
+          "0005",
           "0001",
           "0103",
           "1503",
           "1501",
+          "1506",
+          "1510",
+          "1515",
+          "1520",
           "1530",
           "1600",
         ].indexOf(moment(now).format("mmss")) > -1
