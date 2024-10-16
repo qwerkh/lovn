@@ -2496,7 +2496,7 @@ export default {
       let currentSecond = parseInt(moment(now).format("ss"));
       if (currentMinute < 10 && currentSecond % 5 == 0) {
         vm.fetchResult();
-      } else if (currentMinute < 25 && currentSecond % 15 == 0) {
+      } else if (currentMinute < 20 && currentSecond % 15 == 0) {
         vm.fetchResult();
       } else if (currentSecond === 1) {
         vm.fetchResult();
