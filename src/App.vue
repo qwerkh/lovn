@@ -17,15 +17,14 @@
         style="background-color: #ffde59; float: left; padding-left: 30px"
       >
         <v-row>
-          <v-col col="12" md="4" sm="4">
-            <div class="vl" style="float: right"></div>
-
+          <v-col cols="4" md="4" sm="4">
             Copyright © 1991 lo-vietnam.com Street: 348 Bach MaiCity: Hai Ba
             Trung Dist. State/province/area: <br />Hanoi Phone number: (04)
             38639429 Country calling code: +94 Country: Vietnam
           </v-col>
-          <v-col col="12" md="2" sm="2">
-            <ul>
+          <v-col cols="4" md="2" sm="2">
+            <div class="vl" style="float: left"></div>
+            <ul style="padding-left: 20px">
               <li>Privacy Policy</li>
               <li>Term of service</li>
               <li>Copyright</li>
@@ -34,7 +33,7 @@
               <li>About us</li>
             </ul>
           </v-col>
-          <v-col col="12" md="2" sm="2" style="padding-left: 20px">
+          <v-col cols="4" md="2" sm="2" style="padding-left: 20px">
             <ul>
               <li>Chính sách bảo mật</li>
               <li>Thời hạn dịch vụ</li>
