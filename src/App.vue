@@ -3,7 +3,10 @@
     <v-main>
       <router-view />
     </v-main>
-    <v-footer style="padding: 0px !important" class="d-flex flex-column">
+    <v-footer
+      style="padding: 0px !important; font-size: 8px"
+      class="d-flex flex-column"
+    >
       <div
         class="d-flex w-100 align-center px-4"
         style="background-color: #ffc000; height: 50px"
@@ -14,12 +17,14 @@
         style="background-color: #ffde59; float: left; padding-left: 30px"
       >
         <v-row>
-          <v-col col="12" md="4" sm="4" style="border-right: 2px solid teal">
-            Copyright © 2012 lo-vietnam.com<br />
-            Công ty cổ phầ n truyề n thông HDC Việt Nam<br />
-            Tầ ng 3, S3, Vinhomes Skylake Phạm Hùng, Nam Từ Liêm, Hà Nội
+          <v-col col="12" md="4" sm="4">
+            <div class="vl" style="float: right"></div>
+
+            Copyright © 1991 lo-vietnam.com Street: 348 Bach MaiCity: Hai Ba
+            Trung Dist. State/province/area: <br />Hanoi Phone number: (04)
+            38639429 Country calling code: +94 Country: Vietnam
           </v-col>
-          <v-col col="12" md="4" sm="4" style="padding-left: 20px">
+          <v-col col="12" md="2" sm="2">
             <ul>
               <li>Privacy Policy</li>
               <li>Term of service</li>
@@ -27,6 +32,16 @@
               <li>Disclaimer</li>
               <li>Contact us</li>
               <li>About us</li>
+            </ul>
+          </v-col>
+          <v-col col="12" md="2" sm="2" style="padding-left: 20px">
+            <ul>
+              <li>Chính sách bảo mật</li>
+              <li>Thời hạn dịch vụ</li>
+              <li>Bản quyền</li>
+              <li>Tuyên bố từ chối trách nhiệm</li>
+              <li>Liên hệ với chúng tôi</li>
+              <li>Về chúng tôi</li>
             </ul>
           </v-col>
           <v-col col="12" md="4" sm="4" v-if="!$vuetify.display.mobile">
@@ -78,3 +93,9 @@ export default {
   },
 };
 </script>
+<style scoped>
+.vl {
+  border-left: 1px solid green;
+  height: 70px;
+}
+</style>
