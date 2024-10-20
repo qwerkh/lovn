@@ -1,55 +1,60 @@
 <template>
-  <v-row class="child-flex">
-    <div style="flex-basis: 50%">
-      <v-toolbar app color="red">
-        <v-icon
-          v-if="$vuetify.display.mobile"
-          @click="fetchResult"
-          style="
-            color: white;
-            font-size: 30px;
-            margin-left: 20px;
-            padding-top: 10px;
-          "
-          >mdi-home</v-icon
-        >
-        <v-icon
-          v-if="!$vuetify.display.mobile"
-          @click="fetchResult"
-          style="
-            color: white;
-            font-size: 40px;
-            margin-left: 20px;
-            padding-top: 10px;
-          "
-          >mdi-home</v-icon
-        >
-        <v-toolbar-title
-          :style="
-            $vuetify.display.mobile
-              ? 'padding-top: 10px;font-size: 10px'
-              : 'padding-top: 10px'
-          "
-          >{{ title }}</v-toolbar-title
-        >
-      </v-toolbar>
-    </div>
-
-    <div style="flex-basis: 50%">
-      <v-toolbar app color="white" prominent style="padding-top: 5px">
-        <v-img src="@/assets/f1.png"></v-img>
-        <v-img src="@/assets/f2.png"></v-img>
-        <v-img src="@/assets/f3.png"></v-img>
-        <v-img src="@/assets/f4.png"></v-img>
-        <v-img src="@/assets/f5.png"></v-img>
-        <v-img src="@/assets/f6.png"></v-img>
-        <v-img src="@/assets/f7.png"></v-img>
-      </v-toolbar>
-    </div>
-  </v-row>
-
-  <v-main :style="$vuetify.display.mobile ? 'padding:2px' : 'padding: 25px'">
+  <v-main
+    :style="
+      $vuetify.display.mobile
+        ? 'padding:2px;padding-top:0px'
+        : 'padding: 25px;padding-top:0px'
+    "
+  >
     <v-container v-if="!$vuetify.display.mobile">
+      <v-row class="child-flex">
+        <div style="flex-basis: 50%">
+          <v-toolbar app color="red">
+            <v-icon
+              v-if="$vuetify.display.mobile"
+              @click="fetchResult"
+              style="
+                color: white;
+                font-size: 30px;
+                margin-left: 20px;
+                padding-top: 10px;
+              "
+              >mdi-home</v-icon
+            >
+            <v-icon
+              v-if="!$vuetify.display.mobile"
+              @click="fetchResult"
+              style="
+                color: white;
+                font-size: 40px;
+                margin-left: 20px;
+                padding-top: 10px;
+              "
+              >mdi-home</v-icon
+            >
+            <v-toolbar-title
+              :style="
+                $vuetify.display.mobile
+                  ? 'padding-top: 10px;font-size: 10px'
+                  : 'padding-top: 10px'
+              "
+              >{{ title }}</v-toolbar-title
+            >
+          </v-toolbar>
+        </div>
+
+        <div style="flex-basis: 50%">
+          <v-toolbar app color="white" prominent style="padding-top: 5px">
+            <v-img src="@/assets/f1.png"></v-img>
+            <v-img src="@/assets/f2.png"></v-img>
+            <v-img src="@/assets/f3.png"></v-img>
+            <v-img src="@/assets/f4.png"></v-img>
+            <v-img src="@/assets/f5.png"></v-img>
+            <v-img src="@/assets/f6.png"></v-img>
+            <v-img src="@/assets/f7.png"></v-img>
+          </v-toolbar>
+        </div>
+      </v-row>
       <v-row>
         <v-col cols="5" md="3" sm="3">
           <v-card>
@@ -1147,6 +1152,54 @@
       </v-row>
     </v-container>
     <div v-if="$vuetify.display.mobile">
+      <v-row class="child-flex">
+        <div style="flex-basis: 50%">
+          <v-toolbar app color="red">
+            <v-icon
+              v-if="$vuetify.display.mobile"
+              @click="fetchResult"
+              style="
+                color: white;
+                font-size: 30px;
+                margin-left: 20px;
+                padding-top: 10px;
+              "
+              >mdi-home</v-icon
+            >
+            <v-icon
+              v-if="!$vuetify.display.mobile"
+              @click="fetchResult"
+              style="
+                color: white;
+                font-size: 40px;
+                margin-left: 20px;
+                padding-top: 10px;
+              "
+              >mdi-home</v-icon
+            >
+            <v-toolbar-title
+              :style="
+                $vuetify.display.mobile
+                  ? 'padding-top: 10px;font-size: 10px'
+                  : 'padding-top: 10px'
+              "
+              >{{ title }}</v-toolbar-title
+            >
+          </v-toolbar>
+        </div>
+
+        <div style="flex-basis: 50%">
+          <v-toolbar app color="white" prominent style="padding-top: 5px">
+            <v-img src="@/assets/f1.png"></v-img>
+            <v-img src="@/assets/f2.png"></v-img>
+            <v-img src="@/assets/f3.png"></v-img>
+            <v-img src="@/assets/f4.png"></v-img>
+            <v-img src="@/assets/f5.png"></v-img>
+            <v-img src="@/assets/f6.png"></v-img>
+            <v-img src="@/assets/f7.png"></v-img>
+          </v-toolbar>
+        </div>
+      </v-row>
       <v-row style="margin-top: 5px">
         <v-col cols="5" md="3" sm="3">
           <v-card>
