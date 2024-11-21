@@ -45,13 +45,15 @@
 
         <div style="flex-basis: 50%">
           <v-toolbar app color="white" prominent style="padding-top: 5px">
-            <v-img src="@/assets/f1.png"></v-img>
-            <v-img src="@/assets/f2.png"></v-img>
-            <v-img src="@/assets/f3.png"></v-img>
-            <v-img src="@/assets/f4.png"></v-img>
-            <v-img src="@/assets/f5.png"></v-img>
-            <v-img src="@/assets/f6.png"></v-img>
-            <v-img src="@/assets/f7.png"></v-img>
+            <v-img v-if="!configDoc.flagUrl" src="@/assets/f1.png"></v-img>
+            <v-img v-if="!configDoc.flagUrl" src="@/assets/f2.png"></v-img>
+            <v-img v-if="!configDoc.flagUrl" src="@/assets/f3.png"></v-img>
+            <v-img v-if="!configDoc.flagUrl" src="@/assets/f4.png"></v-img>
+            <v-img v-if="!configDoc.flagUrl" src="@/assets/f5.png"></v-img>
+            <v-img v-if="!configDoc.flagUrl" src="@/assets/f6.png"></v-img>
+            <v-img v-if="!configDoc.flagUrl" src="@/assets/f7.png"></v-img>
+
+            <v-img v-if="configDoc.flagUrl" :src="configDoc.flagUrl"></v-img>
           </v-toolbar>
         </div>
       </v-row>
@@ -1190,13 +1192,18 @@
 
         <div style="flex-basis: 50%">
           <v-toolbar app color="white" prominent style="padding-top: 5px">
-            <v-img src="@/assets/f1.png"></v-img>
-            <v-img src="@/assets/f2.png"></v-img>
-            <v-img src="@/assets/f3.png"></v-img>
-            <v-img src="@/assets/f4.png"></v-img>
-            <v-img src="@/assets/f5.png"></v-img>
-            <v-img src="@/assets/f6.png"></v-img>
-            <v-img src="@/assets/f7.png"></v-img>
+            <v-img v-if="!configDoc.flagPhoneUrl" src="@/assets/f1.png"></v-img>
+            <v-img v-if="!configDoc.flagPhoneUrl" src="@/assets/f2.png"></v-img>
+            <v-img v-if="!configDoc.flagPhoneUrl" src="@/assets/f3.png"></v-img>
+            <v-img v-if="!configDoc.flagPhoneUrl" src="@/assets/f4.png"></v-img>
+            <v-img v-if="!configDoc.flagPhoneUrl" src="@/assets/f5.png"></v-img>
+            <v-img v-if="!configDoc.flagPhoneUrl" src="@/assets/f6.png"></v-img>
+            <v-img v-if="!configDoc.flagPhoneUrl" src="@/assets/f7.png"></v-img>
+
+            <v-img
+              v-if="configDoc.flagPhoneUrl"
+              :src="configDoc.flagPhoneUrl"
+            ></v-img>
           </v-toolbar>
         </div>
       </v-row>
