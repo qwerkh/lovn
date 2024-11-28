@@ -44,7 +44,7 @@
         </div>
 
         <div style="flex-basis: 50%">
-          <v-toolbar app color="white" prominent style="padding-top: 5px">
+          <v-toolbar app color="white" prominent :style="configDoc.flagUrl ? '' : 'padding-top: 5px'">
             <v-img v-if="!configDoc.flagUrl" src="@/assets/f1.png"></v-img>
             <v-img v-if="!configDoc.flagUrl" src="@/assets/f2.png"></v-img>
             <v-img v-if="!configDoc.flagUrl" src="@/assets/f3.png"></v-img>
@@ -1326,37 +1326,43 @@
             cover
           ></v-img>
           <v-img
+              v-if="configDoc.advertiseLeftUrl4"
             class="bg-grey-lighten-2"
-            :src="configDoc.advertiseLeftUrl1"
+            :src="configDoc.advertiseLeftUrl4"
             cover
           ></v-img>
 
           <v-img
+              v-if="configDoc.advertiseLeftUrl5"
             class="bg-grey-lighten-2"
-            :src="configDoc.advertiseLeftUrl2"
+            :src="configDoc.advertiseLeftUrl5"
             cover
           ></v-img>
 
           <v-img
+              v-if="configDoc.advertiseLeftUrl6"
             class="bg-grey-lighten-2"
-            :src="configDoc.advertiseLeftUrl3"
+            :src="configDoc.advertiseLeftUrl6"
             cover
           ></v-img>
           <v-img
+              v-if="configDoc.advertiseLeftUrl7"
             class="bg-grey-lighten-2"
-            :src="configDoc.advertiseLeftUrl1"
-            cover
-          ></v-img>
-
-          <v-img
-            class="bg-grey-lighten-2"
-            :src="configDoc.advertiseLeftUrl2"
+            :src="configDoc.advertiseLeftUrl7"
             cover
           ></v-img>
 
           <v-img
+              v-if="configDoc.advertiseLeftUrl8"
             class="bg-grey-lighten-2"
-            :src="configDoc.advertiseLeftUrl3"
+            :src="configDoc.advertiseLeftUrl8"
+            cover
+          ></v-img>
+
+          <v-img
+              v-if="configDoc.advertiseLeftUrl9"
+            class="bg-grey-lighten-2"
+            :src="configDoc.advertiseLeftUrl9"
             cover
           ></v-img>
         </v-col>
