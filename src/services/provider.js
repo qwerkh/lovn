@@ -1,6 +1,6 @@
 
 // Live
-const baseURL = "https://entry.lo-vietnam.com/api/v1";
+const baseURL = "https://entry.lo-vn.com/api/v1";
 const baseURLNoPort = "http://134.209.97.124";
 const basePort = 5978;
 
