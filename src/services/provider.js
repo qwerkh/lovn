@@ -1,7 +1,9 @@
 
 // Live
-const baseURL = "https://entry.lo-vn.com/api/v1";
-const baseURLNoPort = "http://134.209.97.124";
+const baseURL = "https://admin.lo-vn2.com/api/v1";
+// const baseURL = "https://entry.lo-vn.com/api/v1";
+// const baseURLNoPort = "http://134.209.97.124";
+const baseURLNoPort = "http://206.189.87.113";
 const basePort = 5978;
 
 // Test
